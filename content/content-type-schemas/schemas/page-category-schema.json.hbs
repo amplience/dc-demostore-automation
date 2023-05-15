@@ -33,16 +33,7 @@
                     "title": "Slug",
                     "type": "string",
                     "description": "Slug of the page URL in the app",
-                    "pattern": "category\/.*",
-                    "ui:extension": {
-                        "name": "ecomm-toolkit",
-                        "params": {
-                            "label": "Linked Category",
-                            "view": "single",
-                            "data": "category",
-                            "type": "string"
-                        }
-                    }
+                    "pattern": "category\/.*"
                 }
             },
             "required": [
@@ -52,7 +43,16 @@
         "name": {
             "type": "string",
             "title": "Ecommerce Category Slug",
-            "description": "Slug of the ecommerce category (i.e., 'womens', not 'Womens')"
+            "description": "Slug of the ecommerce category (i.e., 'womens', not 'Womens')",
+            "ui:extension": {
+                "name": "ecomm-toolkit",
+                "params": {
+                    "label": "Linked Category",
+                    "view": "tree",
+                    "data": "category",
+                    "type": "string"
+                }
+            }
         },
         "hideProductList": {
             "title": "Hide Product List",
