@@ -33,7 +33,16 @@
                     "title": "Slug",
                     "type": "string",
                     "description": "Slug of the page URL in the app",
-                    "pattern": "category\/.*"
+                    "pattern": "category\/.*",
+                    "ui:extension": {
+                        "name": "ecomm-toolkit",
+                        "params": {
+                            "label": "Linked Category",
+                            "view": "single",
+                            "data": "category",
+                            "type": "string"
+                        }
+                    }
                 }
             },
             "required": [
