@@ -20,16 +20,17 @@
 		},
 		"category": {
 			"title": "Product Category",
-			"description": "",
+			"description": "The product category used to to render",
 			"type": "string",
-			"enum": [
-				"kids",
-				"men",
-				"women",
-				"sale",
-				"women-new_arrivals",
-				"men-new_arrivals"
-			]
+			"ui:extension": {
+                "name": "ecomm-toolkit",
+                "params": {
+                    "label": "Linked Category",
+                    "view": "single",
+                    "data": "category",
+                    "type": "string"
+                }
+            }
 		},
 
 		"limit": {

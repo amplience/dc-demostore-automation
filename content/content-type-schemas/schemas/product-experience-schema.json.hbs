@@ -45,7 +45,17 @@
 	"properties": {
 		"id": {
 			"type": "string",
-			"title": "Product ID"
+			"title": "Ecommerce Product",
+			"description": "The eCommerce product that this experience relates to",
+			"ui:extension": {
+				"name": "ecomm-toolkit",
+				"params": {
+				"label": "Search By Category",
+				"view": "product",
+				"data": "product",
+				"type": "string"
+				}
+			}
 		},
 		"priority": {
 			"type": "number",
