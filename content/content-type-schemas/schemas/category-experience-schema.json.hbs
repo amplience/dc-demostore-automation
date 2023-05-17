@@ -46,8 +46,17 @@
 	"type": "object",
 	"properties": {
 		"id": {
-			"type": "string",
-			"title": "Category ID"
+			"title": "Ecommerce Category",
+            "description": "The eCommerce category that this experience relates to",
+			"ui:extension": {
+                "name": "ecomm-toolkit",
+                "params": {
+                    "label": "Linked Category",
+                    "view": "single",
+                    "data": "category",
+                    "type": "string"
+                }
+            }
 		},
 		"priority": {
 			"type": "number",
