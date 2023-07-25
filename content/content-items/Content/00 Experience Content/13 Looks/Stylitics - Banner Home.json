@@ -29,7 +29,7 @@
             "_meta": {
               "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
             },
-            "id": "{{dam.imagesMap.homeHeroImageDesk1950x}}",
+            "id": "{{dam.imagesMap.homeHeroImageDesk1950X}}",
             "name": "home_hero_image_desk_1950x",
             "endpoint": "{{dam.mediaEndpoint}}",
             "defaultHost": "cdn.media.amplience.net"

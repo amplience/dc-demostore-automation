@@ -29,7 +29,7 @@
             "_meta": {
               "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
             },
-            "id": "{{dam.imagesMap.styliticsWmnCover1950x}}",
+            "id": "{{dam.imagesMap.styliticsWmnCover1950X}}",
             "name": "stylitics_wmn_cover_1950x",
             "endpoint": "{{dam.mediaEndpoint}}",
             "defaultHost": "cdn.media.amplience.net"
