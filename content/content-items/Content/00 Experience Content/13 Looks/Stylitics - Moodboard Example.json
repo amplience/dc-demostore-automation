@@ -4,7 +4,7 @@
     "_meta": {
       "name": "Stylitics - Moodboard Example",
       "schema": "https://demostore.amplience.com/content/stylitics/moodboard",
-      "deliveryKey": "stylitics/moodbaord-example"
+      "deliveryKey": "stylitics/moodboard-example"
     },
     "view": "moodboard",
     "api": {
