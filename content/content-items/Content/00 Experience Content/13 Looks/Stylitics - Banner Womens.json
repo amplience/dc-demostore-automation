@@ -29,9 +29,9 @@
             "_meta": {
               "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
             },
-            "id": "7e6bdd70-397a-4172-a77f-e6245b4209a2",
+            "id": "{{dam.imagesMap.styliticsWmnCover1950x}}",
             "name": "stylitics_wmn_cover_1950x",
-            "endpoint": "nmrsaalphatest",
+            "endpoint": "{{dam.mediaEndpoint}}",
             "defaultHost": "cdn.media.amplience.net"
           }
         }

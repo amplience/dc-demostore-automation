@@ -29,9 +29,9 @@
             "_meta": {
               "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
             },
-            "id": "cba70965-1713-4961-93c7-2f88209bc7f8",
+            "id": "{{dam.imagesMap.beautyHeroImageDesk1950x}}",
             "name": "beauty_hero_image_desk_1950x",
-            "endpoint": "nmrsaalphatest",
+            "endpoint": "{{dam.mediaEndpoint}}",
             "defaultHost": "cdn.media.amplience.net"
           }
         }
