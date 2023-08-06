@@ -105,8 +105,20 @@
 			"allOf": [
 				{ "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link" }
 			]
+		},
+		"imageAltText": {
+			"type": "string",
+			"title": "Image alt text",
+			"description": "Alternative text for image for SEO",
+			"minLength": 0,
+			"maxLength": 255,
+			"ui:extension": {
+				"name": "ai-image-caption",
+				"params": {
+				"image": "1/image"
+				}
+			}
 		}
-		
 	},
-	"propertyOrder": ["filterActive", "locationName", "_meta", "locationAddress", "image", "keyElements", "details"]
+	"propertyOrder": ["filterActive", "locationName", "_meta", "locationAddress", "image", "imageAltText", "keyElements", "details"]
 }

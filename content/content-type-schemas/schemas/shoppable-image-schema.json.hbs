@@ -17,6 +17,19 @@
             { "$ref": "https://demostore.amplience.com/lib/shoppable-image-partial#/definitions/shoppableImage" }
         ]
     },
+    "imageAltText": {
+			"type": "string",
+			"title": "Image alt text",
+			"description": "Alternative text for image for SEO",
+			"minLength": 0,
+			"maxLength": 255,
+			"ui:extension": {
+				"name": "ai-image-caption",
+				"params": {
+				"image": "1/shoppableImage/image"
+				}
+			}
+		},
     "polygonHide": {
         "title": "Hide Polygon Areas",
         "description": "Hide Hotspots Areas (circles, rectangles)",

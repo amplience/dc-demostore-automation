@@ -54,7 +54,13 @@
 					"title": "Image alt text",
 					"type": "string",
 					"minLength": 0,
-					"maxLength": 150
+					"maxLength": 255,
+					"ui:extension": {
+						"name": "ai-image-caption",
+						"params": {
+							"image": "1/image"
+						}
+					}
 				},
 				"linkUrl": {
 					"type": "string",
