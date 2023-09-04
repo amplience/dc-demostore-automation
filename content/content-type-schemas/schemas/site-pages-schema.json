@@ -37,6 +37,12 @@
                 "deliveryKey"
             ]
         },
+        "ecommCategories": {
+            "title": "Populate categories from eCommerce",
+            "description": "If true, visible eCommerce categories that don't have a matching content item will be automatically created.",
+            "type": "boolean",
+            "default": "false"
+        },
         "slots": {
             "title": "Slots",
             "type": "array",
