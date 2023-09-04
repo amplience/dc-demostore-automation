@@ -1,0 +1,55 @@
+{
+    "id": "https://demostore.amplience.com/site/integration/rest",
+    "title": "REST integration (demo)",
+    "description": "REST integration for demostore",
+    "allOf": [
+        {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+        }
+    ],
+    "type": "object",
+    "properties": {
+        "vendor": {
+            "title": "Vendor",
+            "description": "The Commerce Vendor",
+            "type": "string",
+            "const": "rest"
+        },
+        "codec_params": {
+            "title": "Codec Params",
+            "type": "object",
+            "properties": {
+                "productURL": {
+                    "title": "Product file URL",
+                    "type": "string",
+                    "default": "https://demostore-catalog.s3.us-east-2.amazonaws.com/products.json"
+                },
+                "categoryURL": {
+                    "title": "Category file URL",
+                    "type": "string",
+                    "default": "https://demostore-catalog.s3.us-east-2.amazonaws.com/categories.json"
+                },
+                "customerGroupURL": {
+                    "title": "Customer group file URL",
+                    "type": "string",
+                    "default": "https://demostore-catalog.s3.us-east-2.amazonaws.com/customerGroups.json"
+                },
+                "translationsURL": {
+                    "title": "Translations file URL",
+                    "type": "string",
+                    "default": "https://demostore-catalog.s3.us-east-2.amazonaws.com/translations.json"
+                }
+            },
+            "propertyOrder": [
+                "productURL",
+                "categoryURL",
+                "customerGroupURL",
+                "translationsURL"
+            ]
+        }
+    },
+    "propertyOrder": [
+       "vendor",
+       "codec_params" 
+    ]
+}

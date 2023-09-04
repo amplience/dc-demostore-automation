@@ -1,0 +1,53 @@
+{
+    "id": "https://demostore.amplience.com/site/integration/shopify",
+    "title": "Shopify integration",
+    "description": "Shopify integration for demostore",
+    "allOf": [
+        {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+        }
+    ],
+    "type": "object",
+    "properties": {
+        "vendor": {
+            "title": "Vendor",
+            "description": "The Commerce Vendor",
+            "type": "string",
+            "const": "shopify"
+        },
+        "codec_params": {
+            "title": "Codec Params",
+            "type": "object",
+            "properties": {
+                "access_token": {
+                    "title": "Shopify storefront access token",
+                    "type": "string"
+                },
+                "admin_access_token": {
+                    "title": "Shopify admin access token",
+                    "type": "string"
+                },
+                "version": {
+                    "title": "Shopify API Version",
+                    "description": "eg. 2023-01"
+                    "type": "string",
+                    "default": "2023-01"
+                },
+                "site_id": {
+                    "title": "Shopify Site ID",
+                    "type": "string"
+                }
+            },
+            "propertyOrder": [
+                "access_token",
+                "admin_access_token",
+                "version",
+                "site_id"
+            ]
+        }
+    },
+    "propertyOrder": [
+       "vendor",
+       "codec_params" 
+    ]
+}

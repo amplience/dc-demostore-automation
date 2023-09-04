@@ -1,0 +1,22 @@
+{
+  "contentTypeUri": "https://demostore.amplience.com/site/integration/rest",
+  "status": "ACTIVE",
+  "settings": {
+    "label": "REST integration",
+    "icons": [
+      {
+        "size": 256,
+        "url": "https://amplience.a.bigcontent.io/v1/static/amplience-logo-dark"
+      }
+    ],
+    "visualizations": [
+      {
+        "label": "JSON",
+        "templatedUri": "https://delivery-preview.visualizations.content.amplience.net?id=\{{content.sys.id}}&vse=\{{vse.domain}}&locale=\{{locales}}&hub={{cms.hub}}&realtime=true",
+        "default": false
+      }
+    ],
+    "cards": []
+  },
+  "repositories": [ "sitestructure" ]
+}

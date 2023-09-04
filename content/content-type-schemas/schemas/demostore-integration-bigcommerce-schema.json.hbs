@@ -1,0 +1,47 @@
+{
+    "id": "https://demostore.amplience.com/site/integration/bigcommerce",
+    "title": "BigCommerce integration",
+    "description": "BigCommerce integration for demostore",
+    "allOf": [
+        {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+        }
+    ],
+    "type": "object",
+    "properties": {
+        "vendor": {
+            "title": "Vendor",
+            "description": "The Commerce Vendor",
+            "type": "string",
+            "const": "bigcommerce"
+        },
+        "codec_params": {
+            "title": "Codec Params",
+            "type": "object",
+            "properties": {
+                "api_url": {
+                    "title": "Commercetools Project Key",
+                    "type": "string"
+                },
+                "api_token": {
+                    "title": "Commercetools Language (en)",
+                    "type": "string",
+                    "default": "en"
+                },
+                "store_hash": {
+                    "title": "Commercetools Client ID",
+                    "type": "string"
+                }
+            },
+            "propertyOrder": [
+                "api_url",
+                "api_token",
+                "store_hash"
+            ]
+        }
+    },
+    "propertyOrder": [
+       "vendor",
+       "codec_params" 
+    ]
+}

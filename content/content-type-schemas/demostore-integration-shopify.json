@@ -1,0 +1,5 @@
+{
+  "body": "./schemas/demostore-integration-shopify-schema.json",
+  "schemaId": "https://demostore.amplience.com/site/integration/shopify",
+  "validationLevel": "CONTENT_TYPE"
+}

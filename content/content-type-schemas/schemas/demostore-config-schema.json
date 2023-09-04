@@ -37,7 +37,11 @@
 					"properties": {
 						"contentType": {
 							"enum": [
-								"https://demostore.amplience.com/site/integration/rest"
+								"https://demostore.amplience.com/site/integration/rest",
+								"https://demostore.amplience.com/site/integration/sfcc",
+								"https://demostore.amplience.com/site/integration/commercetools",
+								"https://demostore.amplience.com/site/integration/shopify",
+								"https://demostore.amplience.com/site/integration/bigcommerce"
 							]
 						}
 					}
