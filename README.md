@@ -31,7 +31,7 @@ If you account does not come with any existing media, please upload all assets i
 │   │   │       ├── 03 Other Content Types
 │   │   │       ├── 04 Blogs and Dynamic Blog Lists
 │   │   │       ├── 05 Homepage
-│   │   │       ├── 06 Landing Pages
+│   │   │       ├── 06 Content Pages
 │   │   │       ├── 07 Layouts
 │   │   │       ├── 08 Stores
 │   │   │       └── 09 Looks
