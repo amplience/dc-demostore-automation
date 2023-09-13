@@ -38,8 +38,14 @@
                 "deliveryKey"
             ]
         },
+        "active": {
+            "type": "boolean",
+            "title": "Is Active?",
+            "description": "When unchecked, this page becomes inaccessible (you should get a 404 page not found error when inactive).",
+            "default": true
+        },
         "title": {
-            "title": "Title",
+            "title": "Title*",
             "description": "Title for the page",
             "allOf": [
                 { "$ref": "http://bigcontent.io/cms/schema/v1/localization#/definitions/localized-string" }

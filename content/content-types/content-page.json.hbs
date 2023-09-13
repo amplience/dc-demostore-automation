@@ -1,17 +1,17 @@
 {
-  "contentTypeUri": "https://demostore.amplience.com/slots/content-page",
+  "contentTypeUri": "https://demostore.amplience.com/content/content-page",
   "status": "ACTIVE",
   "settings": {
-    "label": "Content Page Slot",
+    "label": "Content Page",
     "icons": [
       {
         "size": 256,
-        "url": "https://bigcontent.io/cms/icons/potter/potter-page.png"
+        "url": "https://raw.githubusercontent.com/neilmistryamplience/dc-example-website/willow/icons/icon-page.png"
       }
     ],
     "visualizations": [
       {
-        "label": "Site",
+        "label": "Website",
         "templatedUri": "{{url}}/visualization?vse=\{{vse.domain}}&content=\{{content.sys.id}}&locale=\{{locales}}&realtime=true",
         "default": true
       },
@@ -33,9 +33,9 @@
     ],
     "cards": [
       {
-        "templatedUri": "{{url}}/visualization/standalone?vse=\{{vse.domain}}&content=\{{content.sys.id}}&locale=\{{locales}}"
+        "templatedUri": "{{url}}/visualization/standalone?vse=\{{vse.domain}}&content=\{{content.sys.id}}"
       }
     ]
   },
-  "repositories": [ "slots" ]
+  "repositories": [ "content", "contentfr", "contentde", "contentes", "contentit" ]
 }

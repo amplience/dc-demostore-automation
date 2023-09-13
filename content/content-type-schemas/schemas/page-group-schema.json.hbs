@@ -27,8 +27,14 @@
 	
 	"type": "object",
 	"properties": {
+        "active": {
+            "type": "boolean",
+            "title": "Is Active?",
+            "description": "When unchecked, this page becomes inaccessible.",
+            "default": true
+        },
         "title": {
-            "title": "Title",
+            "title": "Title*",
             "description": "description",
             "allOf": [
                 { "$ref": "http://bigcontent.io/cms/schema/v1/localization#/definitions/localized-string" }

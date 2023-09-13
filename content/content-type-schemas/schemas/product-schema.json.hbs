@@ -36,6 +36,12 @@
                 "deliveryKey"
             ]
         },
+    "active": {
+      "type": "boolean",
+      "title": "Is Active?",
+      "description": "When unchecked, this page becomes inaccessible.",
+      "default": true
+    },
 		"header": {
 			"title": "Title",
 			"description": "description",
@@ -52,7 +58,7 @@
           "styles": ".was-price { color: red; }",
           "tools": {
             "ai": {
-              "key": ""
+              "key": "{{openaiKey}}"
             },
             "blacklist": [],
             "dc-content-link": {
