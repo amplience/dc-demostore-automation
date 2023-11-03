@@ -28,23 +28,16 @@ If you account does not come with any existing media, please upload all assets i
 │   │   │   └── 00 Experience Content/
 │   │   │       ├── 01 Banners
 │   │   │       ├── 02 Cards and Card Lists
-│   │   │       ├── 04 Other Content Types
-│   │   │       ├── 05 Externally Referenced Products
-│   │   │       ├── 06 Blogs and Dynamic Blog Lists
-│   │   │       ├── 07 Homepage
-│   │   │       ├── 08 Landing Pages
-│   │   │       ├── 10 Products
-│   │   │       ├── 11 Layouts
-│   │   │       └── 12 Stores
+│   │   │       ├── 03 Other Content Types
+│   │   │       ├── 04 Blogs and Dynamic Blog Lists
+│   │   │       ├── 05 Homepage
+│   │   │       ├── 06 Content Pages
+│   │   │       ├── 07 Layouts
+│   │   │       ├── 08 Stores
+│   │   │       └── 09 Looks
 │   │   ├── Email Marketing
 │   │   ├── Site Components
-│   │   └── Slots/
-│   │       └── 01 Web/
-│   │           ├── Accessories
-│   │           ├── Men
-│   │           ├── New
-│   │           ├── Sale
-│   │           └── Women
+│   │   └── Slots
 │   ├── content-type-schemas/
 │   │   └── schemas
 │   ├── content-types

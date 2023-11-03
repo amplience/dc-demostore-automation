@@ -18,6 +18,11 @@
           "language": "json",
           "styles": ".was-price { color: red; }",
           "tools": {
+            {{#if openaiKey}}
+            "ai": {
+              "key": "{{openaiKey}}"
+            },
+            {{/if}}
             "blacklist": [],
             "dc-content-link": {
               "contentTypes": [
@@ -42,7 +47,13 @@
                 "https://demostore.amplience.com/content/split-block",
                 "https://demostore.amplience.com/content/text",
                 "https://demostore.amplience.com/content/video",
-                                "https://demostore.amplience.com/content/dynamic-blog-list"
+                "https://demostore.amplience.com/content/dynamic-blog-list",
+                "https://demostore.amplience.com/content/stylitics/generic",
+                "https://demostore.amplience.com/content/stylitics/classic",
+                "https://demostore.amplience.com/content/stylitics/hotspots",
+                "https://demostore.amplience.com/content/stylitics/moodboard",
+                "https://demostore.amplience.com/content/stylitics/main-and-detail",
+                "https://demostore.amplience.com/content/stylitics/gallery"
               ],
                "contentTypeSettings":
                             {
@@ -150,6 +161,10 @@
                     "toolName": "clear_formatting"
                   }
                 ]
+              },
+              {
+                "type": "button",
+                "toolName": "ai"
               }
             ]
           }
