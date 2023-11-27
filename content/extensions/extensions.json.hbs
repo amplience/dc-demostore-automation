@@ -4,11 +4,11 @@
       "label": "Shoppable Image",
       "description": "Shoppable Image Extension",
       "height": 200,
-      "url": "https://shoppable-image.extensions.content.amplience.net",
+      "url": "https://feature-ai--shoppable-image-ai.netlify.app",
       "category": "CONTENT_FIELD",
-      "parameters": "{}",
+      "parameters" : "{\n  \"ai\": {\n    \"basePath\": \"https://poi-ai.amplience-qa.net\"\n  }\n}",
       "snippets": [],
-      "settings": null,
+      "settings": "{\"API\":{\"READ\":true,\"EDIT\":true},\"SANDBOX\":{\"SAME_ORIGIN\":true,\"MODALS\":false,\"NAVIGATION\":false,\"POPUPS\":false,\"POPUP_ESCAPE_SANDBOX\":false,\"DOWNLOADS\":false,\"FORMS\":false}}",
       "status": "ACTIVE"
   },
   {
@@ -263,5 +263,31 @@
     ],
     "settings": "{\"API\":{\"READ\":true,\"EDIT\":true},\"SANDBOX\":{\"SAME_ORIGIN\":true,\"MODALS\":false,\"NAVIGATION\":false,\"POPUPS\":true,\"POPUP_ESCAPE_SANDBOX\":true,\"DOWNLOADS\":false,\"FORMS\":false}}",
     "status": "ACTIVE"
+    },
+    {
+        "name" : "seo-keywords",
+        "label" : "SEO Keywords",
+        "description" : "LABS release illustrating to automatically generate SEO keywords",
+        "url" : "https://presalesadisws.s3-eu-west-1.amazonaws.com/ui-extensions/dc-extension-keywords/index.html",
+        "height" : 200,
+        "enabledForAllContentTypes" : false,
+        "category" : "CONTENT_FIELD",
+        "parameters" : "{\n  {{#if openaiKey}}\"key\": \"{{openaiKey}}\"\n{{/if}}\n}",
+        "snippets" : [ ],
+        "settings" : "{\"API\":{\"READ\":true,\"EDIT\":true},\"SANDBOX\":{\"SAME_ORIGIN\":true,\"MODALS\":false,\"NAVIGATION\":false,\"POPUPS\":false,\"POPUP_ESCAPE_SANDBOX\":false,\"DOWNLOADS\":false,\"FORMS\":false}}",
+        "status" : "ACTIVE"
+    },
+    {
+        "name" : "seo-fields",
+        "label" : "SEO Fields",
+        "description" : "Description: LABS to generate title and description",
+        "url" : "https://presalesadisws.s3-eu-west-1.amazonaws.com/ui-extensions/dc-extension-seo-field/index.html",
+        "height" : 200,
+        "enabledForAllContentTypes" : false,
+        "category" : "CONTENT_FIELD",
+        "parameters" : "{\n  {{#if openaiKey}}\"key\": \"{{openaiKey}}\"\n{{/if}}\n}",
+        "snippets" : [ ],
+        "settings" : "{\"API\":{\"READ\":true,\"EDIT\":true},\"SANDBOX\":{\"SAME_ORIGIN\":true,\"MODALS\":false,\"NAVIGATION\":false,\"POPUPS\":false,\"POPUP_ESCAPE_SANDBOX\":false,\"DOWNLOADS\":false,\"FORMS\":false}}",
+        "status" : "ACTIVE"
     }
 ]

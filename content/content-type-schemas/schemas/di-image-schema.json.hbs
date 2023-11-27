@@ -134,11 +134,22 @@
     "disablePoiAspectRatio": {
       "title": "Disable POI Aspect Ratio",
       "type": "boolean"
+    },
+    "di":{
+      "type": "string",
+			"title": "Additional Imaging Params",
+			"description": "Optional Dynamic Media paramaters to control the image (https://amplience.com/developers/docs/apis/media-delivery/media-delivery-reference)",
+      "examples":[
+        "bg=rgb(255,255,255)",
+        "https://amplience.com/developers/docs/apis/media-delivery/media-delivery-reference/"
+      ]
     }
   },
   "propertyOrder": [
     "img",
     "imageAltText",
-    "seoText"
+    "seoText",
+    "disablePoiAspectRatio",
+    "di"
   ]
 }

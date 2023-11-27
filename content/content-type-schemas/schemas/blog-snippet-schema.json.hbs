@@ -26,7 +26,16 @@
       "description": "Blog post title",
       "validation": "Please enter less than 255 characters",
       "minLength": 0,
-      "maxLength": 255
+      "maxLength": 255,
+        "ui:extension": {
+            "name": "seo-fields",
+            "params": {
+                "type": "title",
+                "include": [
+                    "/content/text"
+                ]
+            }
+        }
     },
     "description": {
       "type": "string",
@@ -34,7 +43,16 @@
       "description": "Blog post description",
       "validation": "Please enter less than 500 characters",
       "minLength": 0,
-      "maxLength": 500
+      "maxLength": 500,
+      "ui:extension": {
+          "name": "seo-fields",
+          "params": {
+              "type": "description",
+              "include": [
+                  "/content/text"
+              ]
+          }
+      }
     },
     "cta": {
       "type": "object",
@@ -76,8 +94,14 @@
         "minLength": 0,
         "maxLength": 500
       },
-      "minItems": 0,
-      "maxItems": 50
+      "ui:extension": {
+          "name": "seo-keywords",
+          "params": {
+              "include": [
+                  "/content/text"
+              ]
+          }
+      }
     },
     "author": {
       "type": "string",
