@@ -220,6 +220,38 @@
 							}
 						},
 						{
+                            "name": "product_attribute_override",
+                            "title": "Product Attribute Override",
+                            "icon": "sell",
+                            "group": "Commerce",
+                            "slots": {},
+                            "properties": {
+                                "variant": {
+                                    "type": "string",
+                                    "title": "Variant",
+                                    "enum": [
+                                        "id",
+                                        "name",
+                                        "longDescription",
+                                        "articleNumberMax",
+                                        "color",
+                                        "designer",
+                                        "size",
+                                        "sku",
+                                        "header",
+                                        "text"
+                                    ]
+                                },
+                                "richTextVariant": {
+                                    "type": "string",
+                                    "title": "Rich Text Variant",
+                                    "enum": [
+                                        "textOverride"
+                                    ]
+                                }
+                            }
+                        },
+						{
 							"name": "product_image_viewer",
 							"title": "Product Media Viewer",
 							"icon": "sell",
