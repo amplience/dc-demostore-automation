@@ -41,6 +41,23 @@
       "status": "ACTIVE"
   },
   {
+      "name": "custom-rich-text-studio",
+      "label": "Custom Rich Text Studio",
+      "description": "Custom Rich Text Editor with Content Studio",
+      "url": "https://presalesadisws.s3-eu-west-1.amazonaws.com/dynamic-content/extensions/dc-extension-rich-text-with-content-studio/index.html",
+      "height": 500,
+      "category": "CONTENT_FIELD",
+      "parameters": "{\n  \"language\": \"json\",\n  \"styles\": \".was-price { color: red; }\",\n  \"tools\": {\n{{#if openaiKey}}    \"ai\":{\n      \"key\": \"{{openaiKey}}\"\n    },\n{{/if}}    \"blacklist\": [],\n    \"dc-content-link\": {\n      \"contentTypes\": [\n        \"https://demostore.amplience.com/content/simple-banner\",\n        \"https://demostore.amplience.com/content/simple-banner-bynder\",\n        \"https://demostore.amplience.com/banner-with-poi\",\n        \"https://demostore.amplience.com/content/blog\",\n        \"https://demostore.amplience.com/content/blog-list\",\n        \"https://demostore.amplience.com/content/card\",\n        \"https://demostore.amplience.com/content/card-list\",\n        \"https://demostore.amplience.com/content/curated-product-grid\",\n        \"https://demostore.amplience.com/content/rich-text\",\n        \"https://demostore.amplience.com/content/product-grid\",\n        \"https://demostore.amplience.com/content/html\",\n        \"https://demostore.amplience.com/content/image\",\n        \"https://demostore.amplience.com/content/slider\",\n        \"https://demostore.amplience.com/content/split-block\",\n        \"https://demostore.amplience.com/content/text\",\n        \"https://demostore.amplience.com/content/video\",\n        \"https://demostore.amplience.com/content/dynamic-blog-list\"\n      ]\n    },\n    \"inline_styles\": {\n      \"classNames\": [\n        {\n          \"className\": \"was-price\",\n          \"label\": \"Was Price\"\n        }\n      ]\n    }\n  },\n  \"toolbar\": {\n    \"layout\": [\n      {\n        \"type\": \"group\",\n        \"children\": [\n          {\n            \"type\": \"button\",\n            \"toolName\": \"undo\"\n          },\n          {\n            \"type\": \"button\",\n            \"toolName\": \"redo\"\n          }\n        ]\n      },\n      {\n        \"type\": \"dropdown\",\n        \"label\": \"Styles\",\n        \"toolNames\": [\n          \"inline_styles_className_was-price\"\n        ]\n      },\n      {\n        \"type\": \"group\",\n        \"children\": [\n          {\n            \"type\": \"button\",\n            \"toolName\": \"strong\"\n          },\n          {\n            \"type\": \"button\",\n            \"toolName\": \"em\"\n          },\n          {\n            \"type\": \"button\",\n            \"toolName\": \"link\"\n          }\n        ]\n      },\n      {\n        \"type\": \"group\",\n        \"children\": [\n          {\n            \"type\": \"button\",\n            \"toolName\": \"bullet_list\"\n          },\n          {\n            \"type\": \"button\",\n            \"toolName\": \"ordered_list\"\n          }\n        ]\n      },\n      {\n        \"type\": \"group\",\n        \"children\": [\n          {\n            \"type\": \"button\",\n            \"toolName\": \"dc-image-link\"\n          },\n          {\n            \"type\": \"button\",\n            \"toolName\": \"image\"\n          },\n          {\n            \"type\": \"button\",\n            \"toolName\": \"dc-content-link\"\n          },\n          {\n            \"type\": \"button\",\n            \"toolName\": \"blockquote\"\n          },\n          {\n            \"type\": \"button\",\n            \"toolName\": \"code_block\"\n          },\n          {\n            \"type\": \"button\",\n            \"toolName\": \"horizontal_rule\"\n          }\n        ]\n      },\n      {\n        \"type\": \"group\",\n        \"children\": [\n          {\n            \"type\": \"button\",\n            \"toolName\": \"clear_formatting\"\n          }\n        ]\n      },\n      {\n        \"type\": \"button\",\n        \"toolName\": \"ai\"\n      }\n    ]\n  }\n}",
+      "snippets": [
+          {
+              "label": "Rich Text",
+              "body": "{\n  \"type\": \"array\",\n  \"ui:extension\": {\n    \"name\": \"custom-rich-text-studio\"\n  }\n}"
+          }
+      ],
+      "settings": "{\"API\":{\"READ\":true,\"EDIT\":true},\"SANDBOX\":{\"SAME_ORIGIN\":true,\"MODALS\":false,\"NAVIGATION\":false,\"POPUPS\":true,\"POPUP_ESCAPE_SANDBOX\":true,\"DOWNLOADS\":false,\"FORMS\":false}}",
+      "status": "ACTIVE"
+  },
+  {
       "name": "hierarchy-picker",
       "label": "Hierarchy Picker",
       "description": "",
