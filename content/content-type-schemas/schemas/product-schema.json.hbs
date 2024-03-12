@@ -57,11 +57,9 @@
           "language": "json",
           "styles": ".was-price { color: red; }",
           "tools": {
-            {{#if openaiKey}}
-            "ai": {
-              "key": "{{openaiKey}}"
+            "contentStudio":{
+                "baseUrl": "https://app.amplience-dev.net/content-studio"
             },
-            {{/if}}
             "blacklist": [],
             "dc-content-link": {
               "contentTypes": [
