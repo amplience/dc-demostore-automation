@@ -36,14 +36,16 @@
         "textOverride": {
             "type": "array",
             "ui:extension": {
-                "name": "custom-rich-text-content-studio",
+                "name": "custom-rich-text",
                 "params": {
                     "language": "json",
                     "styles": ".was-price { color: red; }",
                     "tools": {
-                        "ai": {
-                            "key": "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"
-                        },
+                        {{#if openaiKey}}
+                            "ai": {
+                            "key": "{{openaiKey}}"
+                            },
+                        {{/if}}
                         "blacklist": [],
                         "dc-content-link": {
                             "contentTypes": [
