@@ -9,7 +9,7 @@
         "root": true
       }
     },
-    "ecommCategories": true,
+    "ecommCategories": false,
     "slots": [
       {
         "_meta": {
