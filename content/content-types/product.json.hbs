@@ -10,10 +10,15 @@
       }
     ],
     "visualizations": [
+       {
+        "label": "PDP",
+        "templatedUri": "{{url}}/product/visualization?vse=\{{vse.domain}}&locale=\{{locales}}&realtime=true&deliveryKey=\{{delivery.key}}",
+        "default": true
+      },
       {
         "label": "Site",
         "templatedUri": "{{url}}/visualization?vse=\{{vse.domain}}&content=\{{content.sys.id}}&locale=\{{locales}}&realtime=true",
-        "default": true
+        "default": false
       },
       {
         "label": "Development",
