@@ -9,6 +9,41 @@
     }
   ],
   "type": "object",
+  "ui:component": {
+    "name": "tabs",
+    "params": {
+      "tabs": {
+        "defaultTab": "Image",
+        "items": [
+          {
+            "label": "Image",
+            "pointers": [
+              "/image"
+            ]
+          },
+          {
+            "label": "Styles",
+            "pointers": [
+              "/opacity",
+              "/textPositioning"
+            ]
+          },
+          {
+            "label": "Text",
+            "pointers": [
+              "/bannerText"
+            ]
+          },
+          {
+            "label": "Call to Action",
+            "pointers": [
+              "/ctaSettings"
+            ]
+          }
+        ]
+      }
+    }
+  },
   "properties": {
     "image": {
       "title": "Image",
@@ -21,13 +56,33 @@
       ]
     },
     "opacity": {
-      "title":"Panel opacity",
+      "title": "Panel opacity",
       "type": "number",
       "default": 0.9
     },
     "textPositioning": {
       "title": "Text Positioning",
       "type": "object",
+      "ui:component": {
+        "name": "grid",
+        "params": {
+          "numColumns": 2,
+          "columns": [
+            {
+              "span": 1,
+              "pointers": [
+                "/textPositionHorizontal"
+              ]
+            },
+            {
+              "span": 1,
+              "pointers": [
+                "/textPositionVertical"
+              ]
+            }
+          ]
+        }
+      },
       "properties": {
         "textPositionHorizontal": {
           "title": "Horizontal Text Position",

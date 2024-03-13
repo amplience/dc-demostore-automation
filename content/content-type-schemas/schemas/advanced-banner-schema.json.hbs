@@ -1,247 +1,455 @@
 {
-	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "https://demostore.amplience.com/content/advanced-banner",
-	"title": "Advanced Banner",
-	"description": "Advanced Banner",
-	"allOf": [
-		{
-			"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
-		}
-	],
-	"type": "object",
-	"properties": {
-		"image": {
-			"title": "Image",
-			"description": "Main Image",
-			"type": "object",
-			"allOf": [
-				{
-					"$ref": "https://demostore.amplience.com/lib/di-image"
-				}
-			]
-		},
-		"bgcol": {
-			"title": "Background Colour",
-			"description": "A background colour for the banner. If blank it will default to white",
-			"format": "color",
-			"type": "string"
-		},
-		"overlaypanel": {
-			"title": "Overlay Panel",
-			"type": "object",
-			"properties": {
-				"opacity": {
-					"title": "Panel opacity",
-					"description": "The opacity of the overlay panel",
-					"type": "number",
-					"minimum": 0,
-					"maximum": 1
-				},
-				"col": {
-					"title": "Panel Colour",
-					"description": "Colour of the overlay panel. If blank it will default to white",
-					"format": "color",
-					"type": "string"
-				},
-				"borderStyle": {
-					"title": "Border Style",
-					"type": "string",
-					"enum": [
-						"black",
-						"white"
-					]
-				},
-				"offsetH": {
-					"title": "Horizontal Offset",
-					"description": "Can be 0, 10% or 112px",
-					"type": "string"
-				},
-				"offsetV": {
-					"title": "Vertical Offset",
-					"description": "Can be 0, 10% or 112px",
-					"type": "string"
-				},
-				"w": {
-					"title": "Width",
-					"description": "Width of the panel in pixels, if none set it will flow.",
-					"type": "number"
-				}
-			}
-		},
-		"textPositioning": {
-			"title": "Text Positioning",
-			"type": "object",
-			"properties": {
-				"textPositionHorizontal": {
-					"title": "Horizontal Text Position",
-					"description": "Select: Left / Center / Right",
-					"type": "string",
-					"default": "left",
-					"enum": [
-						"left",
-						"center",
-						"right"
-					]
-				},
-				"textPositionVertical": {
-					"title": "Vertical Text Position",
-					"description": "Select: Top / Middle / Bottom",
-					"type": "string",
-					"default": "top",
-					"enum": [
-						"top",
-						"middle",
-						"bottom"
-					]
-				}
-			}
-		},
-		"textLines": {
-			"type": "array",
-			"minItems": 0,
-			"maxItems": 4,
-			"items": {
-				"type": "object",
-				"title": "Text Line",
-				"properties": {
-					"text": {
-						"title": "Text",
-						"description": "The text to display",
-						"type": "string"
-					},
-					"col": {
-						"title": "Colour",
-						"description": "Colour",
-						"format": "color",
-						"type": "string"
-					},
-					"variant": {
-						"title": "Variant",
-						"type": "string",
-						"enum": [
-							"h1",
-							"h2",
-							"h3",
-							"h4",
-							"h5",
-							"h6",
-							"subtitle1",
-							"subtitle2"
-						]
-					},
-					"align": {
-						"title": "Align",
-						"type": "string",
-						"enum": [
-							"left",
-							"center",
-							"right",
-							"inherit",
-							"justify"
-						]
-					},
-					"fontFamily": {
-						"title": "Font Family",
-						"type": "string",
-						"enum": [
-							"'Montserrat', sans-serif",
-							"'Helvetica', 'Arial', sans-serif",
-							"'Roboto', 'Helvetica', 'Arial', sans-serif",
-							"'Roboto Condensed', sans-serif"
-						]
-					}
-				}
-			}
-		},
-		"ctas": {
-			"type": "array",
-			"minItems": 0,
-			"maxItems": 4,
-			"items": {
-				"type": "object",
-				"title": "CTA",
-				"properties": {
-					"buttonText": {
-						"title": "CTA Text",
-						"type": "string",
-						"minimum": 4,
-						"maximum": 12
-					},
-					"linkUrl": {
-						"title": "CTA URL",
-						"type": "string"
-					},
-					"variant": {
-						"title": "Variant",
-						"type": "string",
-						"enum": [
-							"contained",
-							"outlined"
-						]
-					}
-				}
-			}
-		},
-		"disclaimer": {
-			"title": "Disclaimer",
-			"type": "object",
-			"properties": {
-				"text": {
-					"title": "Text",
-					"description": "The text to display",
-					"type": "string"
-				},
-				"col": {
-					"title": "Colour",
-					"description": "Colour",
-					"format": "color",
-					"type": "string"
-				},
-				"variant": {
-					"title": "Variant",
-					"type": "string",
-					"enum": [
-						"h1",
-						"h2",
-						"h3",
-						"h4",
-						"h5",
-						"h6",
-						"subtitle1",
-						"subtitle2"
-					]
-				},
-				"align": {
-					"title": "Align",
-					"type": "string",
-					"enum": [
-						"left",
-						"center",
-						"right",
-						"inherit",
-						"justify"
-					]
-				},
-				"fontFamily": {
-					"title": "Font Family",
-					"type": "string",
-					"enum": [
-						"'Montserrat', sans-serif",
-						"'Helvetica', 'Arial', sans-serif",
-						"'Roboto', 'Helvetica', 'Arial', sans-serif",
-						"'Roboto Condensed', sans-serif"
-					]
-				}
-			}
-		}
-	},
-	"propertyOrder": [
-		"image",
-		"bgcol",
-		"overlaypanel",
-		"textPositioning",
-		"textLines",
-		"ctas",
-		"disclaimer"
-	]
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://demostore.amplience.com/content/advanced-banner",
+  "title": "Advanced Banner",
+  "description": "Advanced Banner",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "type": "object",
+  "ui:component": {
+    "name": "tabs",
+    "params": {
+      "tabs": {
+        "defaultTab": "Image",
+        "items": [
+          {
+            "label": "Image",
+            "pointers": [
+              "/image"
+            ]
+          },
+          {
+            "label": "Styles",
+            "pointers": [
+              "/bgcol",
+              "/overlaypanel",
+              "/textPositioning"
+            ]
+          },
+          {
+            "label": "Text",
+            "pointers": [
+              "/textLines"
+            ]
+          },
+          {
+            "label": "Call to Actions",
+            "pointers": [
+              "/ctas"
+            ]
+          },
+          {
+            "label": "Disclaimer",
+            "pointers": [
+              "/disclaimer"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "properties": {
+    "image": {
+      "title": "Image",
+      "description": "Main Image",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "https://demostore.amplience.com/lib/di-image"
+        }
+      ]
+    },
+    "bgcol": {
+      "title": "Background Colour",
+      "description": "A background colour for the banner. If blank it will default to white",
+      "format": "color",
+      "type": "string"
+    },
+    "overlaypanel": {
+      "title": "Overlay Panel",
+      "type": "object",
+      "ui:component": {
+        "name": "grid",
+        "params": {
+          "numColumns": 2,
+          "columns": [
+            {
+              "span": 1,
+              "pointers": [
+                "/opacity"
+              ]
+            },
+            {
+              "span": 1,
+              "pointers": [
+                "/col"
+              ]
+            },
+            {
+              "span": 1,
+              "pointers": [
+                "/borderStyle"
+              ]
+            },
+            {
+              "span": 1,
+              "pointers": [
+                "/w"
+              ]
+            },
+            {
+              "span": 1,
+              "pointers": [
+                "/offsetH"
+              ]
+            },
+            {
+              "span": 1,
+              "pointers": [
+                "/offsetV"
+              ]
+            }
+          ]
+        }
+      },
+      "properties": {
+        "opacity": {
+          "title": "Panel opacity",
+          "description": "The opacity of the overlay panel",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "col": {
+          "title": "Panel Colour",
+          "description": "Colour of the overlay panel. If blank it will default to white",
+          "format": "color",
+          "type": "string"
+        },
+        "borderStyle": {
+          "title": "Border Style",
+          "type": "string",
+          "enum": [
+            "black",
+            "white"
+          ]
+        },
+        "offsetH": {
+          "title": "Horizontal Offset",
+          "description": "Can be 0, 10% or 112px",
+          "type": "string"
+        },
+        "offsetV": {
+          "title": "Vertical Offset",
+          "description": "Can be 0, 10% or 112px",
+          "type": "string"
+        },
+        "w": {
+          "title": "Width",
+          "description": "Width of the panel in pixels, if none set it will flow.",
+          "type": "number"
+        }
+      }
+    },
+    "textPositioning": {
+      "title": "Text Positioning",
+      "type": "object",
+      "ui:component": {
+        "name": "grid",
+        "params": {
+          "numColumns": 2,
+          "columns": [
+            {
+              "span": 1,
+              "pointers": [
+                "/textPositionHorizontal"
+              ]
+            },
+            {
+              "span": 1,
+              "pointers": [
+                "/textPositionVertical"
+              ]
+            }
+          ]
+        }
+      },
+      "properties": {
+        "textPositionHorizontal": {
+          "title": "Horizontal Text Position",
+          "description": "Select: Left / Center / Right",
+          "type": "string",
+          "default": "left",
+          "enum": [
+            "left",
+            "center",
+            "right"
+          ]
+        },
+        "textPositionVertical": {
+          "title": "Vertical Text Position",
+          "description": "Select: Top / Middle / Bottom",
+          "type": "string",
+          "default": "top",
+          "enum": [
+            "top",
+            "middle",
+            "bottom"
+          ]
+        }
+      }
+    },
+    "textLines": {
+      "type": "array",
+      "minItems": 0,
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "ui:component": {
+          "name": "grid",
+          "params": {
+            "numColumns": 2,
+            "columns": [
+              {
+                "span": 2,
+                "pointers": [
+                  "/text"
+                ]
+              },
+              {
+                "span": 1,
+                "pointers": [
+                  "/col"
+                ]
+              },
+              {
+                "span": 1,
+                "pointers": [
+                  "/variant"
+                ]
+              },
+              {
+                "span": 1,
+                "pointers": [
+                  "/align"
+                ]
+              },
+              {
+                "span": 1,
+                "pointers": [
+                  "/fontFamily"
+                ]
+              }
+            ]
+          }
+        },
+        "title": "Text Line",
+        "properties": {
+          "text": {
+            "title": "Text",
+            "description": "The text to display",
+            "type": "string"
+          },
+          "col": {
+            "title": "Colour",
+            "description": "Colour",
+            "format": "color",
+            "type": "string"
+          },
+          "variant": {
+            "title": "Variant",
+            "type": "string",
+            "enum": [
+              "h1",
+              "h2",
+              "h3",
+              "h4",
+              "h5",
+              "h6",
+              "subtitle1",
+              "subtitle2"
+            ]
+          },
+          "align": {
+            "title": "Align",
+            "type": "string",
+            "enum": [
+              "left",
+              "center",
+              "right",
+              "inherit",
+              "justify"
+            ]
+          },
+          "fontFamily": {
+            "title": "Font Family",
+            "type": "string",
+            "enum": [
+              "'Montserrat', sans-serif",
+              "'Helvetica', 'Arial', sans-serif",
+              "'Roboto', 'Helvetica', 'Arial', sans-serif",
+              "'Roboto Condensed', sans-serif"
+            ]
+          }
+        }
+      }
+    },
+    "ctas": {
+      "type": "array",
+      "minItems": 0,
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "ui:component": {
+          "name": "grid",
+          "params": {
+            "numColumns": 4,
+            "columns": [
+              {
+                "span": 4,
+                "pointers": [
+                  "/buttonText"
+                ]
+              },
+              {
+                "span": 3,
+                "pointers": [
+                  "/linkUrl"
+                ]
+              },
+              {
+                "span": 1,
+                "pointers": [
+                  "/variant"
+                ]
+              }
+            ]
+          }
+        },
+        "title": "CTA",
+        "properties": {
+          "buttonText": {
+            "title": "CTA Text",
+            "type": "string",
+            "minimum": 4,
+            "maximum": 12
+          },
+          "linkUrl": {
+            "title": "CTA URL",
+            "type": "string"
+          },
+          "variant": {
+            "title": "Variant",
+            "type": "string",
+            "enum": [
+              "contained",
+              "outlined"
+            ]
+          }
+        }
+      }
+    },
+    "disclaimer": {
+      "title": "Disclaimer",
+      "type": "object",
+      "ui:component": {
+        "name": "grid",
+        "params": {
+          "numColumns": 2,
+          "columns": [
+            {
+              "span": 2,
+              "pointers": [
+                "/text"
+              ]
+            },
+            {
+              "span": 1,
+              "pointers": [
+                "/col"
+              ]
+            },
+            {
+              "span": 1,
+              "pointers": [
+                "/variant"
+              ]
+            },
+            {
+              "span": 1,
+              "pointers": [
+                "/align"
+              ]
+            },
+            {
+              "span": 1,
+              "pointers": [
+                "/fontFamily"
+              ]
+            }
+          ]
+        }
+      },
+      "properties": {
+        "text": {
+          "title": "Text",
+          "description": "The text to display",
+          "type": "string"
+        },
+        "col": {
+          "title": "Colour",
+          "description": "Colour",
+          "format": "color",
+          "type": "string"
+        },
+        "variant": {
+          "title": "Variant",
+          "type": "string",
+          "enum": [
+            "h1",
+            "h2",
+            "h3",
+            "h4",
+            "h5",
+            "h6",
+            "subtitle1",
+            "subtitle2"
+          ]
+        },
+        "align": {
+          "title": "Align",
+          "type": "string",
+          "enum": [
+            "left",
+            "center",
+            "right",
+            "inherit",
+            "justify"
+          ]
+        },
+        "fontFamily": {
+          "title": "Font Family",
+          "type": "string",
+          "enum": [
+            "'Montserrat', sans-serif",
+            "'Helvetica', 'Arial', sans-serif",
+            "'Roboto', 'Helvetica', 'Arial', sans-serif",
+            "'Roboto Condensed', sans-serif"
+          ]
+        }
+      }
+    }
+  },
+  "propertyOrder": [
+    "image",
+    "bgcol",
+    "overlaypanel",
+    "textPositioning",
+    "textLines",
+    "ctas",
+    "disclaimer"
+  ]
 }

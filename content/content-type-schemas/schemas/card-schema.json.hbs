@@ -1,4 +1,4 @@
-{ 
+{
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://demostore.amplience.com/content/card",
   "title": "Card",
@@ -9,6 +9,35 @@
     }
   ],
   "type": "object",
+  "ui:component": {
+    "name": "tabs",
+    "params": {
+      "tabs": {
+        "defaultTab": "Image",
+        "items": [
+          {
+            "label": "Image",
+            "pointers": [
+              "/image"
+            ]
+          },
+          {
+            "label": "Text",
+            "pointers": [
+              "/cardName",
+              "/description"
+            ]
+          },
+          {
+            "label": "Call to Actions",
+            "pointers": [
+              "/links"
+            ]
+          }
+        ]
+      }
+    }
+  },
   "properties": {
     "image": {
       "title": "Image",
