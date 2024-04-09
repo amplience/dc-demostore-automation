@@ -1,5 +1,23 @@
 # Changelog
 
+## [3.0.0](https://github.com/amplience/dc-demostore-automation/compare/v2.3.0...v3.0.0) (2024-04-09)
+
+
+### ⚠ BREAKING CHANGES
+
+* breaking change version bump commit
+
+### Features
+
+* breaking change version bump commit ([f5bb64a](https://github.com/amplience/dc-demostore-automation/commit/f5bb64ada1f6c9c9d79c2bfdee6173562f78d283))
+* Shoppable Image available in personalised Banner Slot [SQUID-482] ([92fcb90](https://github.com/amplience/dc-demostore-automation/commit/92fcb90b3d540f76bc85a2af712c64e7e0df91af))
+
+
+### Bug Fixes
+
+* Remove openAI key option from RTE [SQUID-483] ([bd2759e](https://github.com/amplience/dc-demostore-automation/commit/bd2759ea4b4d6fcfab5e26eb94c07c10e15bf537))
+* Shoppable image automation to be parameterised [SQUID-484] ([6520a6e](https://github.com/amplience/dc-demostore-automation/commit/6520a6e13dfe603ac564c796600d23f2cdf5c050))
+
 ## [2.3.0](https://github.com/amplience/dc-demostore-automation/compare/v2.2.0...v2.3.0) (2023-12-01)
 
 
