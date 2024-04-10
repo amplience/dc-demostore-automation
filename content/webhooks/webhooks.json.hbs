@@ -1,0 +1,223 @@
+[
+  {
+    "label": "Search Index: {{cms.hub}}.blog-production / Blog",
+    "events": [
+      "dynamic-content.snapshot.published"
+    ],
+    "active": true,
+    "handlers": [
+      "https://{{algolia.appId}}.algolia.net/1/indexes/{{cms.hub}}.blog-production/\{{payload.rootContentItem.id}}"
+    ],
+    "notifications": [],
+    "secret": "59063ab3aa28d2f599a2781446015e24dd138191e904a9d63e65486b37ce0cd86b1784306e72a10a35fb573c946625a7db544c68c7b543d79941d651aa1ba410",
+    "createdDate": "2024-03-29T10:30:27.739Z",
+    "lastModifiedDate": "2024-03-29T10:30:42.849Z",
+    "headers": [
+      {
+        "key": "X-Algolia-Application-Id",
+        "value": "{{algolia.appId}}",
+        "secret": false
+      },
+      {
+        "key": "X-Algolia-API-Key",
+        "value": "{{algolia.apiKey}}",
+        "secret": true
+      }
+    ],
+    "filters": [
+      {
+        "type": "equal",
+        "arguments": [
+          {
+            "jsonPath": "$.payload.rootContentItem.contentTypeUri"
+          },
+          {
+            "value": "https://demostore.amplience.com/content/blog"
+          }
+        ]
+      },
+      {
+        "type": "equal",
+        "arguments": [
+          {
+            "jsonPath": "$.payload.createdFrom"
+          },
+          {
+            "value": "content-item"
+          }
+        ]
+      }
+    ],
+    "customPayload": {
+      "type": "text/x-handlebars-template",
+      "value": "{\n    \"locale\": \"\{{default payload.locale \"en-US\"}}\",\n    \{{#withDeliveryContentItem contentItemId=payload.rootContentItem.id account=\"{{cms.hub}}\" stagingEnvironment=\"{{cms.stagingApi}}\" snapshotId=payload.id}}\n    \"_meta\": \{{{JSONstringify _meta}}},\n    \"snippet\": \{{{JSONstringify snippet}}},\n    \"dateAsTimeStamp\": \{{{moment snippet.blogdate format=\"X\"}}}\n    \{{/withDeliveryContentItem}}\n}"
+    },
+    "method": "PUT"
+  },
+  {
+    "label": "Search Index: {{cms.hub}}.blog-production / Blog (archived)",
+    "events": [
+      "dynamic-content.content-item.updated"
+    ],
+    "active": true,
+    "handlers": [
+      "https://{{algolia.appId}}.algolia.net/1/indexes/{{cms.hub}}.blog-production/\{{payload.id}}"
+    ],
+    "notifications": [],
+    "secret": "c38aa79d190fabcc7a30ffac48163fde69f69ba6ced498b7f9916c6af9c70532739c3ab7b68aa641d07ec5c7a7efcd4c8edc20756f7cc44bc87e6e53275df215",
+    "createdDate": "2024-03-29T10:30:28.233Z",
+    "lastModifiedDate": "2024-03-29T10:30:43.974Z",
+    "headers": [
+      {
+        "key": "X-Algolia-Application-Id",
+        "value": "{{algolia.appId}}",
+        "secret": false
+      },
+      {
+        "key": "X-Algolia-API-Key",
+        "value": "{{algolia.apiKey}}",
+        "secret": true
+      }
+    ],
+    "filters": [
+      {
+        "type": "equal",
+        "arguments": [
+          {
+            "jsonPath": "$.payload.body._meta.schema"
+          },
+          {
+            "value": "https://demostore.amplience.com/content/blog"
+          }
+        ]
+      },
+      {
+        "type": "equal",
+        "arguments": [
+          {
+            "jsonPath": "$.payload.status"
+          },
+          {
+            "value": "ARCHIVED"
+          }
+        ]
+      }
+    ],
+    "customPayload": {
+      "type": "text/x-handlebars-template",
+      "value": ""
+    },
+    "method": "DELETE"
+  },
+  {
+    "label": "Search Index: {{cms.hub}}.blog-staging / Blog",
+    "events": [
+      "dynamic-content.content-item.created",
+      "dynamic-content.content-item.updated"
+    ],
+    "active": true,
+    "handlers": [
+      "https://{{algolia.appId}}.algolia.net/1/indexes/{{cms.hub}}.blog-staging/\{{payload.id}}"
+    ],
+    "notifications": [],
+    "secret": "b2a6345d1eff87b0bc6c8de342660114c2adc963334b681d516ab073bc73dc2d6eee69b4b1ca900e752e9425eb1fb1e4a80b23e7a0b32bcb26f04f3fd7ea2f87",
+    "createdDate": "2024-03-29T10:30:45.761Z",
+    "lastModifiedDate": "2024-03-29T10:30:57.111Z",
+    "headers": [
+      {
+        "key": "X-Algolia-Application-Id",
+        "value": "{{algolia.appId}}",
+        "secret": false
+      },
+      {
+        "key": "X-Algolia-API-Key",
+        "value": "{{algolia.apiKey}}",
+        "secret": true
+      }
+    ],
+    "filters": [
+      {
+        "type": "equal",
+        "arguments": [
+          {
+            "jsonPath": "$.payload.body._meta.schema"
+          },
+          {
+            "value": "https://demostore.amplience.com/content/blog"
+          }
+        ]
+      },
+      {
+        "type": "equal",
+        "arguments": [
+          {
+            "jsonPath": "$.payload.status"
+          },
+          {
+            "value": "ACTIVE"
+          }
+        ]
+      }
+    ],
+    "customPayload": {
+      "type": "text/x-handlebars-template",
+      "value": "{\n  \"locale\": \"\{{default payload.locale \"en-US\"}}\",\n  \{{#withDeliveryContentItem contentItemId=payload.id account=\"{{cms.hub}}\" stagingEnvironment=\"{{cms.stagingApi}}\" mediaHost=\"{{cms.stagingApi}}\"}}\n  \"_meta\": \{{{JSONstringify _meta}}},\n  \"snippet\": \{{{JSONstringify snippet}}},\n\t\"dateAsTimeStamp\": \{{{moment snippet.blogdate format=\"X\"}}}\n  \{{/withDeliveryContentItem}}\n}"
+    },
+    "method": "PUT"
+  },
+  {
+    "label": "Search Index: {{cms.hub}}.blog-staging / Blog (archived)",
+    "events": [
+      "dynamic-content.content-item.updated"
+    ],
+    "active": true,
+    "handlers": [
+      "https://{{algolia.appId}}.algolia.net/1/indexes/{{cms.hub}}.blog-staging/\{{payload.id}}"
+    ],
+    "notifications": [],
+    "secret": "4f4dfec1c05b61b303687783233920adf96547137d10cc0ecd754b05036022931e147e7b2bbf418ff525b05bcac21daa430bd64bb33e691dc0e24556dc07e249",
+    "createdDate": "2024-03-29T10:30:46.235Z",
+    "lastModifiedDate": "2024-03-29T10:30:57.768Z",
+    "headers": [
+      {
+        "key": "X-Algolia-Application-Id",
+        "value": "{{algolia.appId}}",
+        "secret": false
+      },
+      {
+        "key": "X-Algolia-API-Key",
+        "value": "{{algolia.apiKey}}",
+        "secret": true
+      }
+    ],
+    "filters": [
+      {
+        "type": "equal",
+        "arguments": [
+          {
+            "jsonPath": "$.payload.body._meta.schema"
+          },
+          {
+            "value": "https://demostore.amplience.com/content/blog"
+          }
+        ]
+      },
+      {
+        "type": "equal",
+        "arguments": [
+          {
+            "jsonPath": "$.payload.status"
+          },
+          {
+            "value": "ARCHIVED"
+          }
+        ]
+      }
+    ],
+    "customPayload": {
+      "type": "text/x-handlebars-template",
+      "value": ""
+    },
+    "method": "DELETE"
+  }
+]
