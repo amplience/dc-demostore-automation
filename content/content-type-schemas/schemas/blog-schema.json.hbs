@@ -40,7 +40,7 @@
       "filterBy": [
           {
               "paths": [
-                  "/snippet/active"
+                  "/active"
               ]
           }
       ]
@@ -60,6 +60,12 @@
       "required": [
           "deliveryKey"
       ]
+    },
+    "active": {
+      "title": "Is active?",
+      "description": "If not active, will not display in blog filters",
+      "type": "boolean",
+      "default": true
     },
     "snippet": {
       "type": "object",
