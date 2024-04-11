@@ -8,6 +8,43 @@
       "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
     }
   ],
+  "trait:sortable": {
+      "sortBy": [
+          {
+              "key": "default",
+              "paths": [
+                  "/snippet/blogdate",
+                  "/snippet/title",
+                  "/snippet/author"
+              ]
+          },
+          {
+              "key": "title",
+              "paths": [
+                  "/snippet/title",
+                  "/snippet/blogdate",
+                  "/snippet/author"
+              ]
+          },
+          {
+              "key": "author",
+              "paths": [
+                  "/snippet/author",
+                  "/snippet/title",
+                  "/snippet/blogdate"
+              ]
+          }
+      ]
+  },
+  "trait:filterable": {
+      "filterBy": [
+          {
+              "paths": [
+                  "/snippet/active"
+              ]
+          }
+      ]
+  },
   "type": "object",
   "properties": {
     "_meta": {
