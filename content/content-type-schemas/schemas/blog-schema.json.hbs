@@ -8,6 +8,43 @@
       "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
     }
   ],
+  "trait:sortable": {
+      "sortBy": [
+          {
+              "key": "default",
+              "paths": [
+                  "/snippet/blogdate",
+                  "/snippet/title",
+                  "/snippet/author"
+              ]
+          },
+          {
+              "key": "title",
+              "paths": [
+                  "/snippet/title",
+                  "/snippet/blogdate",
+                  "/snippet/author"
+              ]
+          },
+          {
+              "key": "author",
+              "paths": [
+                  "/snippet/author",
+                  "/snippet/title",
+                  "/snippet/blogdate"
+              ]
+          }
+      ]
+  },
+  "trait:filterable": {
+      "filterBy": [
+          {
+              "paths": [
+                  "/active"
+              ]
+          }
+      ]
+  },
   "type": "object",
   "properties": {
     "_meta": {
@@ -23,6 +60,12 @@
       "required": [
           "deliveryKey"
       ]
+    },
+    "active": {
+      "title": "Is active?",
+      "description": "If not active, will not display in blog filters",
+      "type": "boolean",
+      "default": true
     },
     "snippet": {
       "type": "object",
