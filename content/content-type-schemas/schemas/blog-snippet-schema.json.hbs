@@ -109,9 +109,8 @@
     "blogdate": {
       "type": "string",
       "title": "Creation Date",
-      "description": "Enter date (yyyy/mm/dd) that blog is created",
-      "validation": "YYYY/MM/DD",
-      "format": "text",
+      "description": "Enter date (yyyy-mm-dd) that blog is created",
+      "format": "date",
       "minLength": 0,
       "maxLength": 10
     },
@@ -144,6 +143,9 @@
     }
   },
   "required": [
+    "title",
+    "author",
+    "description",
     "blogdate"
   ],
   "propertyOrder": [
