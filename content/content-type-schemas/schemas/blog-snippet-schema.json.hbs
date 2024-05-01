@@ -1,4 +1,4 @@
-{ 
+{
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://demostore.amplience.com/content/blog-snippet",
   "title": "Blog Snippet",
@@ -26,7 +26,16 @@
       "description": "Blog post title",
       "validation": "Please enter less than 255 characters",
       "minLength": 0,
-      "maxLength": 255
+      "maxLength": 255,
+      "ui:extension": {
+        "name": "seo-assistant",
+        "params": {
+          "type": "title",
+          "sources": [
+            "/content/text"
+          ]
+        }
+      }
     },
     "description": {
       "type": "string",
@@ -34,7 +43,29 @@
       "description": "Blog post description",
       "validation": "Please enter less than 500 characters",
       "minLength": 0,
-      "maxLength": 500
+      "maxLength": 500,
+      "ui:extension": {
+        "name": "seo-assistant",
+        "params": {
+          "type": "description",
+          "sources": [
+            "/content/text"
+          ]
+        }
+      }
+    },
+    "keywords": {
+      "title": "SEO Keywords",
+      "type": "string",
+      "ui:extension": {
+        "name": "seo-assistant",
+        "params": {
+          "type": "keywords",
+          "sources": [
+            "/content/text"
+          ]
+        }
+      }
     },
     "cta": {
       "type": "object",
@@ -63,22 +94,6 @@
         ]
       }
     },
-    "keywords": {
-      "type": "array",
-      "title": "Keywords",
-      "description": "Keywords",
-      "validation": "",
-      "items": {
-        "type": "string",
-        "title": "label",
-        "description": "keyword",
-        "validation": "keyword",
-        "minLength": 0,
-        "maxLength": 500
-      },
-      "minItems": 0,
-      "maxItems": 50
-    },
     "author": {
       "type": "string",
       "title": "Author",
@@ -103,15 +118,17 @@
       "title": "Tags",
       "type": "array",
       "ui:extension": {
-          "name": "hierarchy-picker",
-          "params": {
-							"nodeId": "{{contentMap.hierarchy-taxonomies}}",
-              "type": "chip"
-          }
+        "name": "hierarchy-picker",
+        "params": {
+          "nodeId": "{{contentMap.hierarchy-taxonomies}}",
+          "type": "chip"
+        }
       },
       "items": {
         "allOf": [
-          { "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-reference" },
+          {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-reference"
+          },
           {
             "properties": {
               "contentType": {
@@ -132,13 +149,13 @@
     "blogdate"
   ],
   "propertyOrder": [
-    "blogdate",
-    "category",
     "image",
     "title",
     "description",
-    "cta",
     "keywords",
+    "blogdate",
+    "category",
+    "cta",
     "author"
   ]
 }
