@@ -14,33 +14,27 @@
 	"type": "object",
 	"properties": {
 		"_meta": {
-            "title": "Product Delivery Key",
-            "properties": {
-                "deliveryKey": {
-                    "title": "Delivery Key",
-                    "description": "product/productId",
-                    "type": "string",
-                    "pattern": "product\/.*",
-                    "ui:extension": {
-                      "name": "ecomm-toolkit",
-                      "params": {
-                        "label": "Search By Category",
-                        "view": "product",
-                        "data": "product",
-                        "type": "string"
-                      }
-                    }
-                }
-            },
-            "required": [
-                "deliveryKey"
-            ]
-        },
-    "active": {
-      "type": "boolean",
-      "title": "Is Active?",
-      "description": "When unchecked, this page becomes inaccessible.",
-      "default": true
+      "title": "Product Delivery Key",
+      "properties": {
+        "deliveryKey": {
+          "title": "Delivery Key",
+          "description": "product/productId",
+          "type": "string",
+          "pattern": "product\/.*",
+          "ui:extension": {
+            "name": "ecomm-toolkit",
+            "params": {
+              "label": "Search By Category",
+              "view": "product",
+              "data": "product",
+              "type": "string"
+            }
+          }
+        }
+      },
+      "required": [
+          "deliveryKey"
+      ]
     },
 		"header": {
 			"title": "Title",

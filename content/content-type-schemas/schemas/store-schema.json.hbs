@@ -26,12 +26,6 @@
 		"filterBy": [
 			{
 				"paths": [
-					"/filterActive"
-				]
-			},
-			{
-				"paths": [
-					"/filterActive",
 					"/keyElements/parking"
 				]
 			}
@@ -40,11 +34,6 @@
 
 	"type": "object",
 	"properties": {
-		"filterActive": {
-			"title": "Active for Filter API",
-			"type": "boolean",
-			"default": "true"
-		},
 		"locationName": {
 			"title": "Store Name",
 			"type": "string",
@@ -120,5 +109,5 @@
 			}
 		}
 	},
-	"propertyOrder": ["filterActive", "locationName", "_meta", "locationAddress", "image", "imageAltText", "keyElements", "details"]
+	"propertyOrder": ["locationName", "_meta", "locationAddress", "image", "imageAltText", "keyElements", "details"]
 }
