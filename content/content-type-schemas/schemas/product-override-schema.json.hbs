@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://demostore.amplience.com/content/product",
-  "title": "Product",
+  "$id": "https://demostore.amplience.com/content/product-override",
+  "title": "Product Override",
   "description": "A retail product.",
   "allOf": [
     {
@@ -9,15 +9,37 @@
     }
   ],
   "type": "object",
+  "ui:component": {
+    "name": "tabs",
+    "params": {
+      "tabs": {
+        "defaultTab": "Product",
+        "items": [
+          {
+            "label": "Product",
+            "pointers": [
+              "/_meta"
+            ]
+          },
+          {
+            "label": "Text",
+            "pointers": [
+              "/textOverride"
+            ]
+          }
+        ]
+      }
+    }
+  },
   "properties": {
     "_meta": {
       "title": "Product Delivery Key",
       "properties": {
         "deliveryKey": {
           "title": "Delivery Key",
-          "description": "product/productId",
+          "description": "product-override/productId",
           "type": "string",
-          "pattern": "product\/.*",
+          "pattern": "product-override/.*",
           "ui:extension": {
             "name": "ecomm-toolkit",
             "params": {
@@ -33,20 +55,7 @@
         "deliveryKey"
       ]
     },
-    "active": {
-      "type": "boolean",
-      "title": "Is Active?",
-      "description": "When unchecked, this page becomes inaccessible.",
-      "default": true
-    },
-    "header": {
-      "title": "Title",
-      "description": "description",
-      "allOf": [
-        { "$ref": "http://bigcontent.io/cms/schema/v1/localization#/definitions/localized-string" }
-      ]
-    },
-    "text": {
+    "textOverride": {
       "type": "array",
       "ui:extension": {
         "name": "custom-rich-text",
@@ -55,48 +64,6 @@
           "styles": ".was-price { color: red; }",
           "tools": {
             "blacklist": [],
-            "dc-content-link": {
-              "contentTypes": [
-                "https://demostore.amplience.com/content/simple-banner",
-                "https://demostore.amplience.com/content/simple-banner-bynder",
-                "https://demostore.amplience.com/banner",
-                "https://demostore.amplience.com/banner-with-poi",
-                "https://demostore.amplience.com/content/blog",
-                "https://demostore.amplience.com/content/blog-list",
-                "https://demostore.amplience.com/content/card",
-                "https://demostore.amplience.com/content/card-list",
-                "https://demostore.amplience.com/content/curated-product-grid",
-                "https://demostore.amplience.com/content/rich-text",
-                "https://demostore.amplience.com/product/grid",
-                "https://demostore.amplience.com/content/html",
-                "https://demostore.amplience.com/content/image",
-                "https://demostore.amplience.com/content/shoppable-image",
-                "https://demostore.amplience.com/product",
-                "https://demostore.amplience.com/promo",
-                "https://demostore.amplience.com/promoList",
-                "https://demostore.amplience.com/shoppableVideo",
-                "https://demostore.amplience.com/content/slider",
-                "https://demostore.amplience.com/content/split-block",
-                "https://demostore.amplience.com/content/text",
-                "https://demostore.amplience.com/content/video",
-                "https://demostore.amplience.com/component/personify-targeted-content",
-                "https://demostore.amplience.com/component/dy-ab-content",
-                "https://demostore.amplience.com/content/dynamic-blog-list",
-                "https://demostore.amplience.com/content/stylitics/generic",
-                "https://demostore.amplience.com/content/stylitics/classic",
-                "https://demostore.amplience.com/content/stylitics/hotspots",
-                "https://demostore.amplience.com/content/stylitics/moodboard",
-                "https://demostore.amplience.com/content/stylitics/main-and-detail",
-                "https://demostore.amplience.com/content/stylitics/gallery"
-              ],
-               "contentTypeSettings":
-                {
-                  "cards":
-                  {
-                    "*": "{{url}}/visualization/standalone?vse=\{{vse.domain}}&content=\{{content.sys.id}}"
-                  }
-                }
-            },
             "inline_styles": {
               "classNames": [
                 {
@@ -168,10 +135,6 @@
                   {
                     "type": "button",
                     "toolName": "image"
-                  },
-                  {
-                    "type": "button",
-                    "toolName": "dc-content-link"
                   },
                   {
                     "type": "button",
