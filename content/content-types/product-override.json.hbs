@@ -11,10 +11,16 @@
         ],
         "visualizations": [
             {
-                "label": "PDP",
+                "label": "PDP (Site)",
                 "templatedUri":
 "{{url}}/product/visualization?vse=\{{vse.domain}}&locale=\{{locales}}&realtime=true&deliveryKey=\{{delivery.key}}",
                 "default": true
+            },
+            {
+                "label": "PDP (Development)",
+                "templatedUri":
+"http://localhost:3000/product/visualization?vse=\{{vse.domain}}&locale=\{{locales}}&realtime=true&deliveryKey=\{{delivery.key}}",
+                "default": false
             },
             {
                 "label": "Site",
