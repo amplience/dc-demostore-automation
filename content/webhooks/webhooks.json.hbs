@@ -51,7 +51,7 @@
     ],
     "customPayload": {
       "type": "text/x-handlebars-template",
-      "value": "{\n    \"locale\": \"\{{default payload.locale \"en-US\"}}\",\n    \{{#withDeliveryContentItem contentItemId=payload.rootContentItem.id account=\"{{cms.hub}}\" stagingEnvironment=\"{{cms.stagingApi}}\" snapshotId=payload.id}}\n    \"_meta\": \{{{JSONstringify _meta}}},\n    \"snippet\": \{{{JSONstringify snippet}}},\n    \"dateAsTimeStamp\": \{{{moment snippet.blogdate format=\"X\"}}}\n    \{{/withDeliveryContentItem}}\n}"
+      "value": "{\n    \"locale\": \"\{{default payload.locale \"en-US\"}}\",\n    \{{#withDeliveryContentItem contentItemId=payload.rootContentItem.id account=\"{{cms.hub}}\" stagingEnvironment=\"{{cms.stagingApi}}\" snapshotId=payload.id}}\n    \"_meta\": \{{{JSONstringify _meta}}},\n    \"snippet\": \{{{JSONstringify snippet}}},\n    \"image_url\": \"https://\{{{snippet.image.image.defaultHost}}}/i/\{{{snippet.image.image.endpoint}}}/\{{{snippet.image.image.name}}}\",\n    \"dateAsTimeStamp\": \{{{moment snippet.blogdate format=\"X\"}}}\n    \{{/withDeliveryContentItem}}\n}"
     },
     "method": "PUT"
   },
@@ -162,7 +162,7 @@
     ],
     "customPayload": {
       "type": "text/x-handlebars-template",
-      "value": "{\n  \"locale\": \"\{{default payload.locale \"en-US\"}}\",\n  \{{#withDeliveryContentItem contentItemId=payload.id account=\"{{cms.hub}}\" stagingEnvironment=\"{{cms.stagingApi}}\" mediaHost=\"{{cms.stagingApi}}\"}}\n  \"_meta\": \{{{JSONstringify _meta}}},\n  \"snippet\": \{{{JSONstringify snippet}}},\n\t\"dateAsTimeStamp\": \{{{moment snippet.blogdate format=\"X\"}}}\n  \{{/withDeliveryContentItem}}\n}"
+      "value": "{\n  \"locale\": \"\{{default payload.locale \"en-US\"}}\",\n  \{{#withDeliveryContentItem contentItemId=payload.id account=\"{{cms.hub}}\" stagingEnvironment=\"{{cms.stagingApi}}\" mediaHost=\"{{cms.stagingApi}}\"}}\n  \"_meta\": \{{{JSONstringify _meta}}},\n  \"snippet\": \{{{JSONstringify snippet}}},\n  \"image_url\": \"https://\{{{snippet.image.image.defaultHost}}}/i/\{{{snippet.image.image.endpoint}}}/\{{{snippet.image.image.name}}}\",\n\t\"dateAsTimeStamp\": \{{{moment snippet.blogdate format=\"X\"}}}\n  \{{/withDeliveryContentItem}}\n}"
     },
     "method": "PUT"
   },
