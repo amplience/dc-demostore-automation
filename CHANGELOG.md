@@ -1,5 +1,37 @@
 # Changelog
 
+## [4.0.0](https://github.com/amplience/dc-demostore-automation/compare/v3.0.0...v4.0.0) (2024-05-15)
+
+
+### Features
+
+* added seo assistant for title, desc and keywords ([#29](https://github.com/amplience/dc-demostore-automation/issues/29)) ([83b3c08](https://github.com/amplience/dc-demostore-automation/commit/83b3c0858f5d29b7bd63f077dfeeab7edde67ad8))
+* Added webhook image url ([#32](https://github.com/amplience/dc-demostore-automation/issues/32)) ([1f92e55](https://github.com/amplience/dc-demostore-automation/commit/1f92e553c209f0bb7f5f0deee13a380a93c3948f))
+* Blog automation has sortable and filterable traits with active flags ([799fc0d](https://github.com/amplience/dc-demostore-automation/commit/799fc0d04178780f578ef07f18b660a91e548d7d))
+* change blog route depending on algolia configuration ([672959f](https://github.com/amplience/dc-demostore-automation/commit/672959f38d0d0a241ce2762e333b8e72096071d0))
+* creating webhooks outside index creation ([01302e7](https://github.com/amplience/dc-demostore-automation/commit/01302e769186fcc3e74076958deaa8e30e97acef))
+* DI image in card in automation ([#31](https://github.com/amplience/dc-demostore-automation/issues/31)) ([61b68a9](https://github.com/amplience/dc-demostore-automation/commit/61b68a9ae432859f7082b68aadc4318d1dee2f8f))
+* product description overrides ([#30](https://github.com/amplience/dc-demostore-automation/issues/30)) ([5bd1381](https://github.com/amplience/dc-demostore-automation/commit/5bd1381a78c3913d1559193688722687ccbe60fb))
+* removing unused index data ([ba1b4cc](https://github.com/amplience/dc-demostore-automation/commit/ba1b4cc7dd2c311ecb9302372841287fbb335996))
+
+
+### Bug Fixes
+
+* Active flag in correct place for automation removal ([d709a2a](https://github.com/amplience/dc-demostore-automation/commit/d709a2a920eaf1db9f78fea50d544ac50493091f))
+* Automation for image alt text ([c3ab309](https://github.com/amplience/dc-demostore-automation/commit/c3ab30923756505937e062fc9fc3e7b85619d4e8))
+* Automation json formatter ([a8fdd83](https://github.com/amplience/dc-demostore-automation/commit/a8fdd83726b8cb7d01e6ccc944c01f1af5e49952))
+* Blog conform and validation ([7d7a2b6](https://github.com/amplience/dc-demostore-automation/commit/7d7a2b6683a83641b20e1de0e183ff70402c53cc))
+* Image Alt ([9f60f2e](https://github.com/amplience/dc-demostore-automation/commit/9f60f2e703c3c5cecf844a19ede0d3fdb9397fef))
+* mapping to correct algolia prop ([3c37e2b](https://github.com/amplience/dc-demostore-automation/commit/3c37e2b0a0b796a8a4de4b058898e2b05bd63d34))
+* Min char length on title & description + typo ([035d381](https://github.com/amplience/dc-demostore-automation/commit/035d381d8f0d297b383494320c3f9c98cc30e338))
+* missing description in blog ([c58b23f](https://github.com/amplience/dc-demostore-automation/commit/c58b23f4460fefdad5dadb2eb7e5f4c7d16bd8d8))
+* only if algolia ([8ae5ff2](https://github.com/amplience/dc-demostore-automation/commit/8ae5ff2d29b44d69152db4e8a6a0514b69f8425e))
+
+
+### Miscellaneous Chores
+
+* release 4.0.0 ([16959d9](https://github.com/amplience/dc-demostore-automation/commit/16959d906ce82e8da74fb4dc868cba8bdbeabcae))
+
 ## [3.0.0](https://github.com/amplience/dc-demostore-automation/compare/v2.3.0...v3.0.0) (2024-04-09)
 
 
