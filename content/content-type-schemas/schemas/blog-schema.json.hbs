@@ -1,4 +1,4 @@
-{ 
+{
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://demostore.amplience.com/content/blog",
   "title": "Blog",
@@ -8,8 +8,55 @@
       "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
     }
   ],
+  "trait:sortable": {
+    "sortBy": [
+      {
+        "key": "default",
+        "paths": [
+          "/snippet/blogdate",
+          "/snippet/title",
+          "/snippet/author"
+        ]
+      },
+      {
+        "key": "title",
+        "paths": [
+          "/snippet/title",
+          "/snippet/blogdate",
+          "/snippet/author"
+        ]
+      },
+      {
+        "key": "author",
+        "paths": [
+          "/snippet/author",
+          "/snippet/title",
+          "/snippet/blogdate"
+        ]
+      }
+    ]
+  },
+  "trait:filterable": {
+    "filterBy": [
+      {
+        "paths": [
+          "/active"
+        ]
+      }
+    ]
+  },
   "type": "object",
   "properties": {
+    "help": {
+      "type": "null",
+      "ui:extension": {
+        "name": "help",
+        "params": {
+          "title": "Blog",
+          "message": "### SEO Assistant features\n#### Title, Description and Keywords\nTitle, description and keywords properties can be automatically generated thanks to our SEO Assistant extension.\nYou first need content in the Rich Text before generating these properties.\n#### Rich Text\nRich Text content can be automatically generated from keywords.\nYou first need to add keywords before generating content."
+        }
+      }
+    },
     "_meta": {
       "title": "",
       "properties": {
@@ -21,8 +68,14 @@
         }
       },
       "required": [
-          "deliveryKey"
+        "deliveryKey"
       ]
+    },
+    "active": {
+      "title": "Is active?",
+      "description": "If not active, will not display in blog filters",
+      "type": "boolean",
+      "default": true
     },
     "snippet": {
       "type": "object",
@@ -86,37 +139,37 @@
       }
     },
     "theme": {
-          "title": "Theme",
-					"type": "object",
-					"properties": {
-						"values": {
-							"type": "array",
-              "maxItems": 1,
-							"ui:extension": {
-								"name": "hierarchy-picker",
-								"params": {
-									"nodeId": "{{contentMap.hierarchy-configuration}}",
-                  "type": "chip"
-								}
-							},
-                            
-							"items": {
-								"allOf": [{
-										"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-reference"
-									},
-									{
-										"properties": {
-											"contentType": {
-												"enum": [
-													"https://demostore.amplience.com/site/theme"
-												]
-											}
-										}
-									}
-								]
-							}
-						}
-					}
+      "title": "Theme",
+      "type": "object",
+      "properties": {
+        "values": {
+          "type": "array",
+          "maxItems": 1,
+          "ui:extension": {
+            "name": "hierarchy-picker",
+            "params": {
+              "nodeId": "{{contentMap.hierarchy-configuration}}",
+              "type": "chip"
+            }
+          },
+          "items": {
+            "allOf": [
+              {
+                "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-reference"
+              },
+              {
+                "properties": {
+                  "contentType": {
+                    "enum": [
+                      "https://demostore.amplience.com/site/theme"
+                    ]
+                  }
+                }
+              }
+            ]
+          }
         }
+      }
+    }
   }
 }

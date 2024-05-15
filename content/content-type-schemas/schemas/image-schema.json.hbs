@@ -23,8 +23,9 @@
     "imageAltText": {
       "type": "string",
       "title": "Image alt text",
-      "description": "Alternative text for image for SEO",
-      "minLength": 0,
+      "description": "Alternative text for image for SEO *",
+      "format": "text",
+      "minLength": 1,
       "maxLength": 255,
       "ui:extension": {
         "name": "ai-image-caption",
@@ -60,14 +61,14 @@
       ]
     }
   },
+  "required": [
+    "imageAltText"
+  ],
   "propertyOrder": [
     "image",
     "imageAltText",
     "seoText",
     "roundel",
     "display"
-  ],
-  "required": [
-        "imageAltText"
-    ]
+  ]
 }

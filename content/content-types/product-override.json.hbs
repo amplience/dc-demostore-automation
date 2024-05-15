@@ -1,0 +1,62 @@
+{
+  "contentTypeUri": "https://demostore.amplience.com/content/product-override",
+  "status": "ACTIVE",
+  "settings": {
+    "label": "Product Override",
+    "icons": [
+      {
+        "size": 256,
+        "url": "https://amprsaprod.a.bigcontent.io/v1/static/exp-web-override"
+      }
+    ],
+    "visualizations": [
+      {
+        "label": "PDP (Site)",
+        "templatedUri":
+  "{{url}}/product/visualization?vse=\{{vse.domain}}&locale=\{{locales}}&realtime=true&deliveryKey=\{{delivery.key}}",
+        "default": true
+      },
+      {
+        "label": "PDP (Development)",
+        "templatedUri":
+  "http://localhost:3000/product/visualization?vse=\{{vse.domain}}&locale=\{{locales}}&realtime=true&deliveryKey=\{{delivery.key}}",
+        "default": false
+      },
+      {
+        "label": "Site",
+        "templatedUri":
+  "{{url}}/visualization?vse=\{{vse.domain}}&content=\{{content.sys.id}}&locale=\{{locales}}&realtime=true",
+        "default": false
+      },
+      {
+        "label": "Development",
+        "templatedUri":
+  "http://localhost:3000/cms/visualization?content=\{{content.sys.id}}&vse=\{{vse.domain}}&locale=\{{locales}}&realtime=true",
+        "default": false
+      },
+      {
+        "label": "QR for Mobile",
+        "templatedUri": "{{url}}/visualization/qr?vse=\{{vse.domain}}&content=\{{content.sys.id}}&locale=\{{locales}}",
+        "default": false
+      },
+      {
+        "label": "JSON",
+        "templatedUri":
+  "https://delivery-preview.visualizations.content.amplience.net?id=\{{content.sys.id}}&vse=\{{vse.domain}}&locale=\{{locales}}&hub={{cms.hub}}&realtime=true",
+        "default": false
+      }
+    ],
+  "cards": [
+    {
+        "templatedUri": "https://amp-rsa-cards.vercel.app/?#vse=\{{vse.domain}}&content=\{{content.sys.id}}"
+    }
+  ]
+  },
+  "repositories": [
+    "content",
+    "contentfr",
+    "contentde",
+    "contentes",
+    "contentit"
+  ]
+}
