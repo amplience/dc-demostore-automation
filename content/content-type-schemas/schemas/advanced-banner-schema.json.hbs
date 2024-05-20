@@ -9,6 +9,48 @@
 		}
 	],
 	"type": "object",
+	"ui:component": {
+		"name": "tabs",
+		"params": {
+			"tabs": {
+				"defaultTab": "Image",
+				"items": [
+					{
+						"label": "Image",
+						"pointers": [
+						"/image"
+						]
+					},
+					{
+						"label": "Styles",
+						"pointers": [
+						"/bgcol",
+						"/overlaypanel",
+						"/textPositioning"
+						]
+					},
+					{
+						"label": "Text",
+						"pointers": [
+						"/textLines"
+						]
+					},
+					{
+						"label": "Call to Actions",
+						"pointers": [
+						"/ctas"
+						]
+					},
+					{
+						"label": "Disclaimer",
+						"pointers": [
+						"/disclaimer"
+						]
+					}
+				]
+			}
+		}
+  	},
 	"properties": {
 		"image": {
 			"title": "Image",

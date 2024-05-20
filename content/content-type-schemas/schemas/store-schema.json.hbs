@@ -39,6 +39,44 @@
 	},
 
 	"type": "object",
+	"ui:component": {
+    "name": "tabs",
+    "params": {
+		"tabs": {
+			"defaultTab": "Image",
+			"items": [
+				{
+					"label": "Image",
+					"pointers": [
+					"/image",
+					"/imageAltText"
+					]
+				},
+				{
+					"label": "Content",
+					"pointers": [
+					"/filterActive",
+					"/_meta"
+					]
+				},
+				{
+					"label": "Store Information",
+					"pointers": [
+					"/locationName",
+					"/locationAddress",
+					"/keyElements"
+					]
+				},
+				{
+					"label": "Details",
+					"pointers": [
+					"/details"
+					]
+				}
+			]
+		}
+		}
+	},
 	"properties": {
 		"filterActive": {
 			"title": "Active for Filter API",

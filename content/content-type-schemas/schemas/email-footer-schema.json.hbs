@@ -9,6 +9,34 @@
 		}
 	],
 	"type": "object",
+	"ui:component": {
+		"name": "tabs",
+		"params": {
+			"tabs": {
+				"defaultTab": "Logo",
+				"items": [
+					{
+						"label": "Logo",
+						"pointers": [
+						"/logoSettings"
+						]
+					},
+					{
+						"label": "Navigation Bar",
+						"pointers": [
+						"/navSettings"
+						]
+					},
+					{
+						"label": "Disclaimer",
+						"pointers": [
+						"/disclaimer"
+						]
+					}
+				]
+			}
+		}
+	},
 	"properties": {
 		"logoSettings": {
 			"title": "Logo Settings",

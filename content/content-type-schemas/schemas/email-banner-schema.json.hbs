@@ -9,6 +9,47 @@
 		}
 	],
 	"type": "object",
+	"ui:component": {
+		"name": "tabs",
+		"params": {
+			"tabs": {
+				"defaultTab": "Wrapper",
+				"items": [
+					{
+						"label": "Wrapper",
+						"pointers": [
+						"/wrapper"
+						]
+					},
+					{
+						"label": "Image",
+						"pointers": [
+						"/bgcol",
+						"/imageSettings"
+						]
+					},
+					{
+						"label": "Heading",
+						"pointers": [
+						"/headingSettings"
+						]
+					},
+					{
+						"label": "Paragraph",
+						"pointers": [
+						"/paragraphSettings"
+						]
+					},
+					{
+						"label": "Call to Action",
+						"pointers": [
+						"/ctaSettings"
+						]
+					}
+				]
+			}
+		}
+  	},
 	"properties": {
 		"wrapper": {
 			"title": "Wrapper Settings",
