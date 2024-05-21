@@ -1,0 +1,191 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://ng-schema-examples.com/configComponent",
+    "title": "Slider",
+    "description": "A carousel of slides",
+    "allOf": [
+        {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+        }
+    ],
+    "ui:extension": {
+        "name": "next-gen-authoring"
+    },
+    "type": "object",
+    "properties": {
+        "grid2x1Image": {
+            "type": "object",
+            "ui:component": {
+                "name": "grid",
+                "params": {
+                    "columns": [
+                        {
+                            "span": 4,
+                            "pointers": [
+                                "/colorpick1"
+                            ]
+                        },
+                        {
+                            "span": 4,
+                            "pointers": [
+                                "/colorpick2"
+                            ]
+                        },
+                        {
+                            "span": 4,
+                            "pointers": [
+                                "/colorpick3"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "properties": {
+                "colorpick1": {
+                    "type": "string",
+                    "title": "Basic Example",
+                    "format": "color",
+                    "description": "The colour format has been set to RGB and the eyedropper tool is disabled",
+                    "ui:component": {
+                        "params": {
+                            "format": "rgb",
+                            "eyeDropper": false,
+                            "withPicker": true
+                        }
+                    }
+                },
+                "colorpick2": {
+                    "type": "string",
+                    "title": "Freedom Picker Example",
+                    "format": "color",
+                    "description": "Use the eyedropper tool, select from the RGBA picker or the RGBA swatches",
+                    "ui:component": {
+                        "params": {
+                            "format": "rgba",
+                            "eyeDropper": true,
+                            "swatches": [
+                                "rgba(145, 23, 145, 1)",
+                                "rgba(46, 25, 25, 1)",
+                                "rgba(227, 160, 127, 1)",
+                                "rgba(140, 35, 100, 1)"
+                            ]
+                        }
+                    }
+                },
+                "colorpick3": {
+                    "type": "string",
+                    "title": "Brand Colour Example",
+                    "format": "color",
+                    "description": "You can only select corporate colour HEX swatches",
+                    "ui:component": {
+                        "params": {
+                            "format": "hex",
+                            "eyeDropper": false,
+                            "disallowInput": true,
+                            "withPicker": false,
+                            "swatches": [
+                                "#d46161",
+                                "#825151",
+                                "#61d4a8",
+                                "#1f1791"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Slider1": {
+			"title": "Two Settings Only and One must always be selected",
+			"description": "Pick a style (1 or 2 is passed to front end)",
+			"type": "number",
+			"minimum": 1,
+			"maximum": 2,
+			"ui:component": {
+				"name": "slider",
+				"params": {
+					"maw": "50%",
+					"marks": [
+						{
+							"value": 1,
+							"label": "Style 1"
+						},
+						{
+							"value": 2,
+							"label": "Style 2"
+						}
+					],
+					"step": 1
+				}
+			}
+		},
+		"Slider2": {
+			"title": "Flexible Range Selector for Sale Discount",
+			"description": "Discount range is visibly limited between 20% and 60%",
+			"type": "number",
+			"minimum": 20,
+			"maximum": 60,
+			"ui:component": {
+				"name": "slider",
+				"params": {
+					"marks": [
+						{
+							"value": 20,
+							"label": "20%"
+						},
+						{
+							"value": 30,
+							"label": "30%"
+						},						
+						{
+							"value": 40,
+							"label": "40%"
+						},
+						{
+							"value": 50,
+							"label": "50%"
+						},
+						{
+							"value": 60,
+							"label": "60%"
+						}
+					],
+					"step": 5
+				}
+			}
+		},
+		"slider3": {
+			"type": "integer",
+			"title": "Gradient setting for background colour",
+			"description": "Default setting is 75%",
+			"ui:component": {
+				"name": "slider",
+				"params": {
+					"defaultValue": 75,
+					"marks": [
+						{
+							"value": 0,
+							"label": "Transparent"
+						},
+						{
+							"value": 25,
+							"label": "Faint"
+						},
+						{
+							"value": 50,
+							"label": "Light"
+						},
+						{
+							"value": 75,
+							"label": "Dark"
+						},
+						{
+							"value": 100,
+							"label": "Solid"
+						}
+					],
+					"step": 25
+				}
+			}
+		}
+    }
+}
