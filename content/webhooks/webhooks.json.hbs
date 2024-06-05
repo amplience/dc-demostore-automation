@@ -111,6 +111,61 @@
     "method": "DELETE"
   },
   {
+    "label": "Search Index: {{cms.hub}}.blog-production / Blog (unpublished)",
+    "events": [
+      "dynamic-content.content-item.updated"
+    ],
+    "active": true,
+    "handlers": [
+      "https://{{algolia.appId}}.algolia.net/1/indexes/{{cms.hub}}.blog-production/\{{payload.id}}"
+    ],
+    "notifications": [],
+    "secret": "c38aa79d190fabcc7a30ffac48163fde69f69ba6ced498b7f9916c6af9c70532739c3ab7b68aa641d07ec5c7a7efcd4c8edc20756f7cc44bc87e6e53275df215",
+    "createdDate": "2024-03-29T10:30:28.233Z",
+    "lastModifiedDate": "2024-03-29T10:30:43.974Z",
+    "headers": [
+      {
+        "key": "X-Algolia-Application-Id",
+        "value": "{{algolia.appId}}",
+        "secret": false
+      },
+      {
+        "key": "X-Algolia-API-Key",
+        "value": "{{algolia.writeKey}}",
+        "secret": true
+      }
+    ],
+    "filters": [
+      {
+        "type": "equal",
+        "arguments": [
+          {
+            "jsonPath": "$.payload.body._meta.schema"
+          },
+          {
+            "value": "https://demostore.amplience.com/content/blog"
+          }
+        ]
+      },
+      {
+        "type": "equal",
+        "arguments": [
+          {
+            "jsonPath": "$.payload.publishingStatus"
+          },
+          {
+            "value": "UNPUBLISHED"
+          }
+        ]
+      }
+    ],
+    "customPayload": {
+      "type": "text/x-handlebars-template",
+      "value": ""
+    },
+    "method": "DELETE"
+  },
+  {
     "label": "Search Index: {{cms.hub}}.blog-staging / Blog",
     "events": [
       "dynamic-content.content-item.created",
