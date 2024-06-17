@@ -56,7 +56,7 @@
     "method": "PUT"
   },
   {
-    "label": "Search Index: {{cms.hub}}.blog-production / Blog (archived)",
+    "label": "Search Index: {{cms.hub}}.blog-production / Blog (unpublished)",
     "events": [
       "dynamic-content.content-item.updated"
     ],
@@ -96,10 +96,10 @@
         "type": "equal",
         "arguments": [
           {
-            "jsonPath": "$.payload.status"
+            "jsonPath": "$.payload.publishingStatus"
           },
           {
-            "value": "ARCHIVED"
+            "value": "UNPUBLISHED"
           }
         ]
       }
