@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.0](https://github.com/amplience/dc-demostore-automation/compare/v4.0.0...v4.1.0) (2024-06-17)
+
+
+### Features
+
+* unpublish webhook ([#34](https://github.com/amplience/dc-demostore-automation/issues/34)) ([524aa8f](https://github.com/amplience/dc-demostore-automation/commit/524aa8f5c477b084540a218147cfcc8c6275396d))
+
 ## [4.0.0](https://github.com/amplience/dc-demostore-automation/compare/v3.0.0...v4.0.0) (2024-05-15)
 
 
