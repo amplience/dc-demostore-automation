@@ -1,38 +1,37 @@
-{ 
-	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "https://demostore.amplience.com/site/tag",
-
-	"title": "Tag",
-	"description": "",
-
-	"allOf": [
-		{
-			"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
-		}
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://demostore.amplience.com/site/tag",
+    "title": "Tag",
+    "description": "",
+    "allOf": [
+        {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+        }
     ],
-    
     "trait:hierarchy": {
-		"childContentTypes": [
+        "childContentTypes": [
             "https://demostore.amplience.com/site/tag-group"
         ]
     },
-
     "trait:sortable": {
         "sortBy": [
-            { "key": "default", "paths": ["/label"] }
+            {
+                "key": "default",
+                "paths": [
+                    "/label"
+                ]
+            }
         ]
     },
-	
-	"type": "object",
-	"properties": {
+    "type": "object",
+    "properties": {
         "label": {
             "type": "string",
             "title": "Label"
         }
     },
-
-    "required": ["label"],
-    
-    "definitions": {
-    }
+    "required": [
+        "label"
+    ],
+    "definitions": {}
 }
