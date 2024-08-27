@@ -54,7 +54,7 @@
                     "title": "Delivery Key",
                     "description": "product/productId",
                     "type": "string",
-                    "pattern": "product/.*",
+                    "pattern": "product\/.*",
                     "ui:extension": {
                         "name": "ecomm-toolkit",
                         "params": {
@@ -124,7 +124,7 @@
                             ],
                             "contentTypeSettings": {
                                 "cards": {
-                                    "*": "https://dc-demostore-core-benp.vercel.app/visualization/standalone?vse={{vse.domain}}&content={{content.sys.id}}"
+                                    "*": "{{url}}/visualization/standalone?vse=\{{vse.domain}}&content=\{{content.sys.id}}"
                                 }
                             }
                         },
