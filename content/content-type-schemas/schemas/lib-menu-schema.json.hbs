@@ -1,24 +1,24 @@
-{ 
-	"$schema": "http://json-schema.org/draft-07/schema#",
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "https://demostore.amplience.com/lib/menu",
-    
-	"type": "object",
+    "type": "object",
     "title": "Menu",
-
     "definitions": {
         "menuItemConfig": {
             "type": "object",
             "title": "Menu",
             "properties": {
                 "priority": {
-                    "type": "number",
+                    "type": "integer",
                     "description": "Integers only, lower numbers show first in the menu",
                     "title": "Priority"
                 },
                 "content": {
                     "title": "Menu Content",
                     "allOf": [
-                        { "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link" },
+                        {
+                            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+                        },
                         {
                             "properties": {
                                 "contentType": {
@@ -31,7 +31,9 @@
                     ]
                 }
             },
-            "required": ["priority"]
+            "required": [
+                "priority"
+            ]
         }
     }
 }

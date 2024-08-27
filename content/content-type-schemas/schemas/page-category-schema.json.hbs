@@ -1,31 +1,43 @@
-{ 
-	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "https://demostore.amplience.com/site/pages/category",
-
-	"title": "Category Page",
-	"description": "",
-
-	"allOf": [
-		{
-			"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
-		}
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://demostore.amplience.com/site/pages/category",
+    "title": "Category Page",
+    "description": "",
+    "allOf": [
+        {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+        }
     ],
-    
     "trait:hierarchy": {
-		"childContentTypes": [
+        "childContentTypes": [
             "https://demostore.amplience.com/site/page-group",
             "https://demostore.amplience.com/site/pages/category"
         ]
     },
-
     "trait:sortable": {
         "sortBy": [
-            { "key": "default", "paths": ["/menu/priority"] }
+            {
+                "key": "default",
+                "paths": [
+                    "/menu/priority"
+                ]
+            }
         ]
     },
-	
-	"type": "object",
-	"properties": {
+    "type": "object",
+    "properties": {
+        "active": {
+            "type": "boolean",
+            "title": "Is Active?",
+            "description": "When unchecked, this page becomes inaccessible (you should get a 404 page not found error when inactive and if the slug doesn't exist in the target eComm).",
+            "default": true,
+            "ui:component": {
+                "name": "switch",
+                "params": {
+                    "labelPosition": "left"
+                }
+            }
+        },
         "_meta": {
             "title": "Page URL",
             "properties": {
@@ -39,12 +51,6 @@
             "required": [
                 "deliveryKey"
             ]
-        },
-        "active": {
-            "type": "boolean",
-            "title": "Is Active?",
-            "description": "When unchecked, this page becomes inaccessible (you should get a 404 page not found error when inactive and if the slug doesn't exist in the target eComm).",
-            "default": true
         },
         "name": {
             "type": "string",
@@ -71,17 +77,23 @@
             "description": "Hide Product List for a Category Landing Page for instance.",
             "type": "boolean"
         },
-        "menu": { "$ref": "https://demostore.amplience.com/lib/menu#/definitions/menuItemConfig" },
+        "menu": {
+            "$ref": "https://demostore.amplience.com/lib/menu#/definitions/menuItemConfig"
+        },
         "components": {
             "title": "Components",
             "type": "array",
             "items": {
                 "title": "Component",
                 "allOf": [
-                    { "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link" },
+                    {
+                        "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+                    },
                     {
                         "properties": {
-                            "contentType": { "$ref": "https://demostore.amplience.com/lib/components#/definitions/anyComponent" }
+                            "contentType": {
+                                "$ref": "https://demostore.amplience.com/lib/components#/definitions/anyComponent"
+                            }
                         }
                     }
                 ]
@@ -93,17 +105,19 @@
             "items": {
                 "title": "Slots",
                 "allOf": [
-                    { "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-reference" },
+                    {
+                        "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-reference"
+                    },
                     {
                         "properties": {
-                            "contentType": { "$ref": "https://demostore.amplience.com/lib/components#/definitions/anySlot" }
+                            "contentType": {
+                                "$ref": "https://demostore.amplience.com/lib/components#/definitions/anySlot"
+                            }
                         }
                     }
                 ]
             }
         }
     },
-
-    "definitions": {
-    }
+    "definitions": {}
 }

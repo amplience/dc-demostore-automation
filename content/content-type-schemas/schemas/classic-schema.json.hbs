@@ -30,7 +30,8 @@
         },
         "view": {
             "type": "string",
-            "const": "classic"
+            "const": "classic",
+            "ui:component": "none"
         },
         "account": {
             "title": "Account",
@@ -84,6 +85,60 @@
                     "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/classic"
                 }
             ]
+        }
+    },
+    "ui:component": {
+        "name": "tabs",
+        "params": {
+            "tabs": {
+                "defaultTab": "Header",
+                "items": [
+                    {
+                        "label": "Header",
+                        "pointers": [
+                            "/header"
+                        ]
+                    },
+                    {
+                        "label": "View",
+                        "pointers": [
+                            "/view",
+                            "/account"
+                        ]
+                    },
+                    {
+                        "label": "SKU",
+                        "pointers": [
+                            "/help",
+                            "/sku"
+                        ]
+                    },
+                    {
+                        "label": "API",
+                        "pointers": [
+                            "/api"
+                        ]
+                    },
+                    {
+                        "label": "Display",
+                        "pointers": [
+                            "/display"
+                        ]
+                    },
+                    {
+                        "label": "Price",
+                        "pointers": [
+                            "/price"
+                        ]
+                    },
+                    {
+                        "label": "Classic",
+                        "pointers": [
+                            "/classic"
+                        ]
+                    }
+                ]
+            }
         }
     },
     "propertyOrder": []
