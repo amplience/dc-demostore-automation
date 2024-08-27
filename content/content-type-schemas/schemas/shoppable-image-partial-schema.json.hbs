@@ -1,7 +1,6 @@
-{ 
-	"$schema": "http://json-schema.org/draft-07/schema#",
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "https://demostore.amplience.com/lib/shoppable-image-partial",
-    
     "definitions": {
         "shoppableImage": {
             "type": "object",
@@ -10,7 +9,9 @@
                     "title": "Image",
                     "description": "The base image that the shoppable image elements are for.",
                     "allOf": [
-                        { "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link" }
+                        {
+                            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+                        }
                     ]
                 },
                 "poi": {
@@ -114,7 +115,7 @@
             },
             "ui:extension": {
                 "name": "shoppable-image"
-            } 
+            }
         }
     }
 }

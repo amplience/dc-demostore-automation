@@ -1,23 +1,18 @@
-{ 
-	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "https://demostore.amplience.com/site/ui",
-
-	"title": "Common UI Components",
-	"description": "",
-
-	"allOf": [
-		{
-			"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
-		}
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://demostore.amplience.com/site/ui",
+    "title": "Common UI Components",
+    "description": "",
+    "allOf": [
+        {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+        }
     ],
-
     "trait:hierarchy": {
-		"childContentTypes": [
-        ]
+        "childContentTypes": []
     },
-	
-	"type": "object",
-	"properties": {
+    "type": "object",
+    "properties": {
         "masthead": {
             "type": "object",
             "title": "Masthead",
@@ -35,7 +30,9 @@
                 "logo": {
                     "title": "Logo",
                     "allOf": [
-                        { "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link" }
+                        {
+                            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+                        }
                     ]
                 },
                 "navigationBackgroundColor": {
@@ -72,7 +69,9 @@
                             "type": {
                                 "type": "string",
                                 "title": "Type",
-                                "enum": ["standard"]
+                                "enum": [
+                                    "standard"
+                                ]
                             },
                             "field": {
                                 "type": "string",
@@ -88,8 +87,5 @@
             }
         }
     },
-    
-    "definitions": {
-        
-    }
+    "definitions": {}
 }

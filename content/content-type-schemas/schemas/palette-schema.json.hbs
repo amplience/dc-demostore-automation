@@ -1,21 +1,16 @@
-{ 
-	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "https://demostore.amplience.com/site/palette",
-
-	"title": "Color Palette",
-	"description": "",
-
-	"allOf": [
-		{
-			"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
-		}
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://demostore.amplience.com/site/palette",
+    "title": "Color Palette",
+    "description": "",
+    "allOf": [
+        {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+        }
     ],
-
     "trait:hierarchy": {
-		"childContentTypes": [
-        ]
+        "childContentTypes": []
     },
-
     "trait:sortable": {
         "sortBy": [
             {
@@ -26,52 +21,63 @@
             }
         ]
     },
-    
     "type": "object",
     "properties": {
         "type": {
             "title": "Type",
             "type": "string",
-            "const": "Palette"
+            "const": "Palette",
+            "ui:component": "none"
         },
         "primary": {
             "title": "Primary",
             "allOf": [
-                { "$ref": "#/definitions/PaletteColorOptions" }
+                {
+                    "$ref": "#/definitions/PaletteColorOptions"
+                }
             ]
         },
         "secondary": {
             "title": "Secondary",
             "allOf": [
-                { "$ref": "#/definitions/PaletteColorOptions" }
+                {
+                    "$ref": "#/definitions/PaletteColorOptions"
+                }
             ]
         },
         "error": {
             "title": "Error",
             "allOf": [
-                { "$ref": "#/definitions/PaletteColorOptions" }
+                {
+                    "$ref": "#/definitions/PaletteColorOptions"
+                }
             ]
         },
         "warning": {
             "title": "Warning",
             "allOf": [
-                { "$ref": "#/definitions/PaletteColorOptions" }
+                {
+                    "$ref": "#/definitions/PaletteColorOptions"
+                }
             ]
         },
         "info": {
             "title": "Info",
             "allOf": [
-                { "$ref": "#/definitions/PaletteColorOptions" }
+                {
+                    "$ref": "#/definitions/PaletteColorOptions"
+                }
             ]
         },
         "success": {
             "title": "Success",
             "allOf": [
-                { "$ref": "#/definitions/PaletteColorOptions" }
+                {
+                    "$ref": "#/definitions/PaletteColorOptions"
+                }
             ]
         }
     },
-    
     "definitions": {
         "PaletteColorOptions": {
             "type": "object",
@@ -94,5 +100,4 @@
             }
         }
     }
-
 }

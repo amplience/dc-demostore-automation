@@ -1,23 +1,19 @@
-{ 
-	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "https://demostore.amplience.com/site/theme",
-
-	"title": "Theme",
-	"description": "",
-
-	"allOf": [
-		{
-			"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
-		}
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://demostore.amplience.com/site/theme",
+    "title": "Theme",
+    "description": "",
+    "allOf": [
+        {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+        }
     ],
-
     "trait:hierarchy": {
-		"childContentTypes": [
+        "childContentTypes": [
             "https://demostore.amplience.com/site/palette",
             "https://demostore.amplience.com/site/typography"
         ]
     },
-    
     "trait:sortable": {
         "sortBy": [
             {
@@ -28,7 +24,6 @@
             }
         ]
     },
-
     "type": "object",
     "properties": {
         "_meta": {
@@ -49,11 +44,8 @@
             "title": "Label"
         }
     },
-
-    "required": ["label"],
-    
-    "definitions": {
-
-    }
-
+    "required": [
+        "label"
+    ],
+    "definitions": {}
 }
