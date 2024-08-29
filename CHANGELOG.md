@@ -1,5 +1,18 @@
 # Changelog
 
+## [4.2.0](https://github.com/amplience/dc-demostore-automation/compare/v4.1.0...v4.2.0) (2024-08-29)
+
+
+### Features
+
+* next gen schema updates ([#36](https://github.com/amplience/dc-demostore-automation/issues/36)) ([54f8221](https://github.com/amplience/dc-demostore-automation/commit/54f8221facd85f48b47a7f5ee897648a06a9ef30))
+* video captions ([#37](https://github.com/amplience/dc-demostore-automation/issues/37)) ([3ce6c77](https://github.com/amplience/dc-demostore-automation/commit/3ce6c7772d3af146ab4b958daa2bf06af75c768c))
+
+
+### Bug Fixes
+
+* video schema syntax ([f0b197f](https://github.com/amplience/dc-demostore-automation/commit/f0b197f55f685b55ea767734fbaa036286702743))
+
 ## [4.1.0](https://github.com/amplience/dc-demostore-automation/compare/v4.0.0...v4.1.0) (2024-06-17)
 
 
