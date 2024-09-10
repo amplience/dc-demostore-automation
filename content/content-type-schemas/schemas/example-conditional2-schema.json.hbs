@@ -1,0 +1,122 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://ng-schema-examples.com/conditional2",
+	"title": "Title",
+	"description": "Description",
+	"allOf": [
+		{
+			"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+		}
+	],
+	"type": "object",
+	"properties": {
+		"condition2": {
+			"title": "Recipe heading section when publish date entered",
+			"type": "object",
+			"properties": {
+				"date": {
+					"title": "Publish Date",
+					"type": "string",
+					"format": "date"
+				}
+			},
+			"if": {
+				"properties": {
+					"date": {
+						"const": null
+					}
+				}
+			},
+			"then": {},
+			"else": {
+				"properties": {
+					"authorName": {
+						"type": "string",
+						"title": "Author Name"
+					},
+					"recipeTitle": {
+						"type": "string",
+						"title": "Recipe Title"
+					},
+					"recipeMeta": {
+						"type": "string",
+						"title": "Meta Description"
+					},
+					"propertyName1": {
+						"title": "Recipe Category",
+						"type": "string",
+						"enum": [
+							"Entrees",
+							"Side Dishes",
+							"Appetizers",
+							"Desserts"
+						]
+					}
+				}
+			}
+		},
+		"condition4": {
+			"title": "Aspect ratio where custom options can be enabled",
+			"type": "object",
+			"properties": {
+				"droplist": {
+					"title": "Image/ Video aspect ratio",
+					"type": "integer",
+					"default": 1,
+					"oneOf": [
+						{
+							"title": "1:1",
+							"const": 1
+						},
+						{
+							"title": "2:1",
+							"const": 2
+						},
+						{
+							"title": "2:3",
+							"const": 3
+						},
+						{
+							"title": "3:2",
+							"const": 4
+						},
+						{
+							"title": "Custom",
+							"const": 5
+						}
+					]
+				}
+			},
+			"if": {
+				"properties": {
+					"droplist": {
+						"const": 5
+					}
+				}
+			},
+			"then": {
+				"properties": {
+					"customWidth": {
+						"type": "number",
+						"title": "Custom Width",
+						"minimum": 0,
+						"examples": [
+							"Custom Width is in pixels"
+						]
+					},
+					"customHeight": {
+						"type": "number",
+						"title": "Custom Height",
+						"minimum": 0,
+						"examples": [
+							"Custom Height is in pixels"
+						]
+					}
+				}
+			}
+		}
+	},
+	"ui:extension": {
+		"name": "next-gen-authoring"
+	}
+}
