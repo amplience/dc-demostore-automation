@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.3.0](https://github.com/amplience/dc-demostore-automation/compare/v4.2.0...v4.3.0) (2024-09-24)
+
+
+### Features
+
+* updating extension permissions to allow image studio integration ([9d57e3b](https://github.com/amplience/dc-demostore-automation/commit/9d57e3bc791720de0e6fa743d473ef39535f558c))
+
 ## [4.2.0](https://github.com/amplience/dc-demostore-automation/compare/v4.1.0...v4.2.0) (2024-08-29)
 
 
