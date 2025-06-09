@@ -1,8 +1,8 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "https://demostore.amplience.com/lib/di-image",
-    "title": "Dynamic Media Image",
-    "description": "Dynamic Media Image (DI) accelerator",
+    "$id": "https://demostore.amplience.com/lib/di-image-localised",
+    "title": "Localised Dynamic Media Image",
+    "description": "Localised Dynamic Media Image (DI) accelerator",
     "allOf": [
         {
             "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
@@ -112,10 +112,15 @@
             ]
         },
         "imageAltText": {
-            "type": "string",
+            "type": "object",
             "minLength": 0,
             "maxLength": 255,
             "title": "Image alt text",
+            "allOf": [
+                {
+                "$ref": "http://bigcontent.io/cms/schema/v1/localization#/definitions/localized-string"
+                }
+            ],
             "ui:extension": {
                 "name": "automatic-alt-text",
                 "params": {
@@ -124,12 +129,17 @@
             }
         },
         "seoText": {
-            "type": "string",
+            "type": "object",
             "minLength": 0,
             "maxLength": 100,
             "title": "SEO text",
             "pattern": "^[/A-Za-z0-9+_-]+$",
-            "description": "Enter only alphanumeric, _, -, +, / characters"
+            "description": "Enter only alphanumeric, _, -, +, / characters",
+            "allOf": [
+                {
+                    "$ref": "http://bigcontent.io/cms/schema/v1/localization#/definitions/localized-string"
+                }
+            ]
         },
         "disablePoiAspectRatio": {
             "title": "Disable POI Aspect Ratio",
