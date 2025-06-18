@@ -33,7 +33,12 @@
                         {
                             "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
                         }
-                    ]
+                    ],
+                    "ui:component": {
+                        "params": {
+                            "withAltText": false
+                        }
+                    }
                 },
                 "imageProperties": {
                     "title": "Logo Properties",
@@ -44,7 +49,7 @@
                             "minLength": 0,
                             "maxLength": 255,
                             "ui:extension": {
-                                "name": "ai-image-caption",
+                                "name": "automatic-alt-text",
                                 "params": {
                                     "image": "2/imageSrc"
                                 }

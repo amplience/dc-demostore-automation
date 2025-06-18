@@ -33,7 +33,12 @@
                         {
                             "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
                         }
-                    ]
+                    ],
+                    "ui:component": {
+                        "params": {
+                            "withAltText": false
+                        }
+                    }
                 },
                 "imageWidth": {
                     "title": "Image pixel width",
@@ -62,7 +67,7 @@
                     "minLength": 0,
                     "maxLength": 255,
                     "ui:extension": {
-                        "name": "ai-image-caption",
+                        "name": "automatic-alt-text",
                         "params": {
                             "image": "1/image"
                         }

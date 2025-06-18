@@ -219,15 +219,32 @@
       "status": "ACTIVE"
   },
   {
-      "name": "ai-image-caption",
-      "label": "AI Image Caption",
-      "description": "Auto generate alt text for an image using AI",
-      "url": "https://ai-image-caption.extensions.content.amplience.net",
+      "name": "automatic-alt-text",
+      "label": "Automatic Alt Text",
+      "description": "Extension to automatically pull in available alt text for an image from the Amplience Content Hub for Compliance or directly from Content Studio APIs ",
+      "url": "https://automatic-alt-text.extensions.content.amplience.net",
       "height": 200,
       "category": "CONTENT_FIELD",
-      "parameters": "{}",
-      "snippets": [],
-      "settings": "{\"API\":{\"READ\":true,\"EDIT\":true},\"SANDBOX\":{\"SAME_ORIGIN\":false,\"MODALS\":false,\"NAVIGATION\":false,\"POPUPS\":true,\"POPUP_ESCAPE_SANDBOX\":false,\"DOWNLOADS\":false,\"FORMS\":false}}",
+      "parameters": "{\n  \"mode\": \"GENERATED\",\n  \"autoCaption\": \"true\" \n}",
+      "snippets": [
+        {
+        "label": "Auto Alt text (Standard)",
+        "body": "{\n  \"type\": \"string\",\n  \"title\": \"Image alt text\",\n  \"description\": \"Alt text for the selected image\",\n  \"ui:extension\": {\n    \"name\": \"automatic-alt-text\",\n    \"params\": {\n      \"image\": \"{{PATH_TO_IMAGE_HERE}}\"\n    }\n  }\n}"
+        },
+        {
+        "label": "Auto Alt text (Localised)",
+        "body": "{\n  \"title\": \"Image alt text\",\n  \"description\": \"Alt text for the selected image\",\n  \"allOf\": [\n    {\n      \"$ref\": \"http://bigcontent.io/cms/schema/v1/localization#/definitions/localized-string\"\n    }\n  ],\n  \"ui:extension\": {\n    \"name\": \"automatic-alt-text\",\n    \"params\": {\n      \"image\": \"{{PATH_TO_IMAGE_HERE}}\"\n    }\n  }\n}"
+        },
+        {
+        "label": "Generate Alt text (Standard)",
+        "body": "{\n  \"title\": \"Image alt text\",\n  \"description\": \"Alt text for the selected image\",\n  \"allOf\": [\n    {\n      \"$ref\": \"http://bigcontent.io/cms/schema/v1/localization#/definitions/localized-string\"\n    }\n  ],\n  \"ui:extension\": {\n    \"name\": \"automatic-alt-text\",\n    \"params\": {\n      \"image\": \"{{PATH_TO_IMAGE_HERE}}\",\n      \"mode\": \"GENERATED\",\n      \"generateAltTextSettings\": {\n        \"templateId\": \"{{TEMPLATE_ID_HERE}}\",\n        \"modelId\": \"{{MODEL_ID_HERE}}\",\n        \"brandVoiceId\": \"{{BRAND_VOICE_ID_HERE}}\"\n      }\n    }\n  }\n}"
+        },
+        {
+        "label": "Generate Alt text (Localised)",
+        "body": "{\n  \"title\": \"Image alt text\",\n  \"description\": \"Alt text for the selected image\",\n  \"allOf\": [\n    {\n      \"$ref\": \"http://bigcontent.io/cms/schema/v1/localization#/definitions/localized-string\"\n    }\n  ],\n  \"ui:extension\": {\n    \"name\": \"automatic-alt-text\",\n    \"params\": {\n      \"image\": \"{{PATH_TO_IMAGE_HERE}}\",\n      \"mode\": \"GENERATED\",\n      \"generateAltTextSettings\": {\n        \"templateId\": \"{{TEMPLATE_ID_HERE}}\",\n        \"modelId\": \"{{MODEL_ID_HERE}}\",\n        \"brandVoiceId\": \"{{BRAND_VOICE_ID_HERE}}\"\n      }\n    }\n  }\n}"
+        }
+      ],
+      "settings": "{\"API\":{\"READ\":true,\"EDIT\":false},\"SANDBOX\":{\"SAME_ORIGIN\":true,\"MODALS\":false,\"NAVIGATION\":false,\"POPUPS\":false,\"POPUP_ESCAPE_SANDBOX\":false,\"DOWNLOADS\":false,\"FORMS\":false}}",
       "status": "ACTIVE"
   },
   {
