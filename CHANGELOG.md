@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.4.0](https://github.com/amplience/dc-demostore-automation/compare/v4.3.0...v4.4.0) (2025-06-18)
+
+
+### Features
+
+* Update automation for alt text extension ([#42](https://github.com/amplience/dc-demostore-automation/issues/42)) ([0f33670](https://github.com/amplience/dc-demostore-automation/commit/0f336707d9d4d46b9c67b636484967a3fd94970f))
+
 ## [4.3.0](https://github.com/amplience/dc-demostore-automation/compare/v4.2.0...v4.3.0) (2024-09-24)
 
 
