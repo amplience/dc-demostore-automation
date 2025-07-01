@@ -15,6 +15,14 @@
             "https://demostore.amplience.com/site/pages/external"
         ]
     },
+    "trait:sortable": {
+        "sortBy": [
+            {
+                "key": "default",
+                "paths": ["/_meta/hierarchy/position"]
+            }
+        ]
+    },
     "type": "object",
     "properties": {
         "title": {
