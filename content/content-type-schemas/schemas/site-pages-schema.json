@@ -12,7 +12,8 @@
         "childContentTypes": [
             "https://demostore.amplience.com/site/pages/category",
             "https://demostore.amplience.com/site/pages/landing",
-            "https://demostore.amplience.com/site/pages/external"
+            "https://demostore.amplience.com/site/pages/external",
+            "https://demostore.amplience.com/site/pages/ecomm-category-placeholder"
         ]
     },
     "type": "object",
