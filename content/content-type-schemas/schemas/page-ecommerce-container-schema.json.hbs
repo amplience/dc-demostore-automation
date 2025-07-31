@@ -1,17 +1,17 @@
 {
-	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "https://demostore.amplience.com/site/pages/ecommerce-container",
-	"title": "Ecommerce Container",
-	"description": "",
-	"allOf": [
-		{
-			"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
-		}
-	],
-	"trait:hierarchy": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://demostore.amplience.com/site/pages/ecommerce-container",
+    "title": "Ecommerce Container",
+    "description": "",
+    "allOf": [
+        {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+        }
+    ],
+    "trait:hierarchy": {
         "childContentTypes": []
     },
-	"trait:sortable": {
+    "trait:sortable": {
         "sortBy": [
             {
                 "key": "default",
@@ -21,9 +21,9 @@
             }
         ]
     },
-	"type": "object",
-	"properties": {
-		"active": {
+    "type": "object",
+    "properties": {
+        "active": {
             "type": "boolean",
             "title": "Is Active?",
             "description": "When unchecked, this page becomes inaccessible.",
@@ -35,22 +35,58 @@
                 }
             }
         },
-		"name": {
-            "title": "Ecommerce Category",
-            "description": "The eCommerce category that will be displayed on this page",
-            "type": "array",
-            "items": {
-                "type": "string",
-                "ui:extension": {
-                    "name": "ecomm-toolkit",
-                    "params": {
-                        "label": "Linked Category",
-                        "view": "tree",
-                        "data": "category",
-                        "type": "string"
+        "fieldset-validation": {
+            "title": "Ecommerce Categories",
+            "type": "object",
+            "properties": {
+                "showAll": {
+                    "type": "boolean",
+                    "title": "Show All?",
+                    "description": "When unchecked, you can manually select and arrange the eCommerce categories.",
+                    "default": true,
+                    "ui:component": {
+                        "name": "switch",
+                        "params": {
+                            "labelPosition": "left"
+                        }
                     }
+                }
+            },
+            "if": {
+                "properties": {
+                    "showAll": {
+                        "const": true
+                    }
+                }
+            },
+            "then": {},
+            "else": {
+                "properties": {
+                    "categoryIds": {
+                        "title": "Ecommerce Category",
+                        "description": "The eCommerce category that will be displayed on this page",
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "ui:extension": {
+                                "name": "ecomm-toolkit",
+                                "params": {
+                                    "label": "Linked Category",
+                                    "view": "tree",
+                                    "data": "category",
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "ui:component": {
+                "name": "fieldset",
+                "params": {
+                    "variant": "default"
                 }
             }
         }
-	}
+    }
 }
