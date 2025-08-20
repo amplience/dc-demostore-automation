@@ -1,5 +1,16 @@
 # Changelog
 
+## [5.0.0](https://github.com/amplience/dc-demostore-automation/compare/v4.4.0...v5.0.0) (2025-08-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* adding ecomm container schema / content type ([#44](https://github.com/amplience/dc-demostore-automation/issues/44))
+
+### Features
+
+* adding ecomm container schema / content type ([#44](https://github.com/amplience/dc-demostore-automation/issues/44)) ([f1fa20a](https://github.com/amplience/dc-demostore-automation/commit/f1fa20ae407e072524787dd2badcd3b605e60efa))
+
 ## [4.4.0](https://github.com/amplience/dc-demostore-automation/compare/v4.3.0...v4.4.0) (2025-06-18)
 
 
