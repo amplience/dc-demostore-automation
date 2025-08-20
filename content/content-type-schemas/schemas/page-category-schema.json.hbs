@@ -19,7 +19,7 @@
             {
                 "key": "default",
                 "paths": [
-                    "/menu/priority"
+                    "/_meta/hierarchy/position"
                 ]
             }
         ]
@@ -52,7 +52,7 @@
                 "deliveryKey"
             ]
         },
-        "name": {
+        "categoryId": {
             "type": "string",
             "title": "Ecommerce Category",
             "description": "The eCommerce category that will be displayed on this page",
@@ -66,19 +66,10 @@
                 }
             }
         },
-        "ecommCategories": {
-            "title": "Populate sub-categories from eCommerce",
-            "description": "If true, visible eCommerce sub-categories that don't have a matching content item will be automatically created.",
-            "type": "boolean",
-            "default": false
-        },
         "hideProductList": {
             "title": "Hide Product List",
             "description": "Hide Product List for a Category Landing Page for instance.",
             "type": "boolean"
-        },
-        "menu": {
-            "$ref": "https://demostore.amplience.com/lib/menu#/definitions/menuItemConfig"
         },
         "components": {
             "title": "Components",

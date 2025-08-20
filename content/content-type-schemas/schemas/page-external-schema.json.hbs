@@ -16,7 +16,7 @@
             {
                 "key": "default",
                 "paths": [
-                    "/menu/priority"
+                    "/_meta/hierarchy/position"
                 ]
             }
         ]
@@ -46,13 +46,11 @@
         "href": {
             "type": "string",
             "title": "Link"
-        },
-        "menu": {
-            "$ref": "https://demostore.amplience.com/lib/menu#/definitions/menuItemConfig"
         }
     },
     "required": [
-        "title"
+        "title",
+        "href"
     ],
     "definitions": {}
 }

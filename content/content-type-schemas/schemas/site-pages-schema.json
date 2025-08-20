@@ -12,7 +12,8 @@
         "childContentTypes": [
             "https://demostore.amplience.com/site/pages/category",
             "https://demostore.amplience.com/site/pages/landing",
-            "https://demostore.amplience.com/site/pages/external"
+            "https://demostore.amplience.com/site/pages/external",
+            "https://demostore.amplience.com/site/pages/ecommerce-container"
         ]
     },
     "type": "object",
@@ -32,18 +33,6 @@
             "required": [
                 "deliveryKey"
             ]
-        },
-        "ecommCategories": {
-            "title": "Populate categories from eCommerce",
-            "description": "If true, visible eCommerce categories that don't have a matching content item will be automatically created.",
-            "type": "boolean",
-            "default": false,
-            "ui:component": {
-                "name": "switch",
-                "params": {
-                    "labelPosition": "left"
-                }
-            }
         },
         "slots": {
             "title": "Slots",
