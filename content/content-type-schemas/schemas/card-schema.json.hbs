@@ -10,6 +10,10 @@
     ],
     "type": "object",
     "properties": {
+        "type":{
+            "const":"card",
+            "ui:component":"none"
+        },
         "image": {
             "type": "object",
             "title": "Image",
@@ -46,5 +50,8 @@
             "minItems": 0,
             "maxItems": 4
         }
-    }
+    },
+    "required":[
+        "type"
+    ]
 }
