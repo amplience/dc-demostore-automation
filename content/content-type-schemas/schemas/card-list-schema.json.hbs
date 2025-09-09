@@ -22,20 +22,40 @@
             "type": "array",
             "title": "Cards",
             "description": "Please select the cards to display in this list",
+            "ui:component": {
+                "params": {
+                    "icons": {
+                        "card": "container"
+                    }
+                }
+            },
             "items": {
-                "allOf": [
+                "type": "object",
+                "oneOf": [
                     {
-                        "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+                        "title": "Card",
+                        "description":"Card only for use in this list",     
+                        "$ref": "https://demostore.amplience.com/content/card"
+
                     },
                     {
-                        "properties": {
-                            "contentType": {
-                                "title": "",
-                                "enum": [
-                                    "https://demostore.amplience.com/content/card"
-                                ]
+                        "type": "object",
+                        "title": "Linked Card",
+                        "description":"Card that is its own content item for re-use",  
+                        "allOf": [
+                            {
+                                "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+                            },
+                            {
+                                "properties": {
+                                    "contentType": {
+                                        "enum": [
+                                            "https://demostore.amplience.com/content/card"
+                                        ]
+                                    }
+                                }
                             }
-                        }
+                        ]
                     }
                 ]
             },
